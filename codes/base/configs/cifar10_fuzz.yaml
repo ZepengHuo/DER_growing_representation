@@ -29,7 +29,7 @@ load_mem: False
 
 
 #Optimization;Training related
-task_max: 5
+task_max: 6 # cifar10: 5  cifar100:10
 lr_min: 0.00005
 lr: 0.1
 weight_decay: 0.0005
@@ -59,13 +59,12 @@ postprocessor:
   weight_decay: 0.0005
 
 decouple:
-  enable: True 
-  epochs: 50
+  enable: True
+  epochs: 30
   fullset: False
-  lr: 0.05
+  lr: 0.1
   scheduling:
     - 15
-    - 30
   lr_decay: 0.1
   weight_decay: 0.0005
   temperature: 5.0
@@ -80,9 +79,11 @@ pretrain:
   lr_decay: 0.1
   weight_decay: 0.0005
 
+# retrain
+random_retrain: False
 
 # Dataset Cfg
-dataset: "cifar10" #'imagenet100', 'cifar100', "cifar10"
+dataset: "cifar10" #'imagenet100', 'cifar100', 'cifar10'
 trial: 2
 increment: 2
 batch_size: 128
@@ -93,13 +94,16 @@ start_class: 0 # number of tasks for the first step, start from 0.
 start_task: 0
 max_task: # Cap the number of task
 
+fuzzy: True  # train on fuzzy split data
+
 #Memory
 coreset_strategy: "iCaRL"  # iCaRL, random
-mem_size_mode: "uniform_fixed_total_mem" #uniform_fixed_per_cls, uniform_fixed_total_mem
+mem_size_mode: "uniform_fixed_per_cls" #uniform_fixed_per_cls, uniform_fixed_total_mem
 memory_size: 2000 # Max number of storable examplars
 fixed_memory_per_cls: 20 # the fixed number of exemplars per cls
 
 # Misc
 device: 0 #GPU index to use, for cpu use -1
+device_ids: [0]
 seed: 1993
 

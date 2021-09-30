@@ -1,0 +1,2278 @@
+
+ 2021-09-24 09:02:41,729 | INFO | root 	 {'exp': {'name': '10scifar10_trial0_debug', 'savedir': './logs', 'tensorboard_dir': './tensorboard/', 'debug': True, 'ckptdir': './logs/'}, 'model': 'incmodel', 'convnet': 'resnet18', 'train_head': 'softmax', 'infer_head': 'softmax', 'channel': 64, 'use_bias': False, 'last_relu': False, 'der': True, 'use_aux_cls': True, 'aux_n+1': True, 'distillation': 'none', 'reuse_oldfc': False, 'weight_normalization': False, 'val_per_n_epoch': -1, 'save_ckpt': True, 'display_norm': False, 'task_max': 5, 'lr_min': 5e-05, 'lr': 0.1, 'weight_decay': 0.0005, 'dynamic_weight_decay': False, 'scheduler': 'multistep', 'scheduling': [100, 120], 'lr_decay': 0.1, 'optimizer': 'sgd', 'epochs': 170, 'postprocessor': {'enable': False, 'type': 'bic', 'epochs': 1, 'batch_size': 128, 'lr': 0.1, 'scheduling': [60, 90, 120], 'lr_decay_factor': 0.1, 'weight_decay': 0.0005}, 'decouple': {'enable': True, 'epochs': 50, 'fullset': False, 'lr': 0.05, 'scheduling': [15, 30], 'lr_decay': 0.1, 'weight_decay': 0.0005, 'temperature': 5.0}, 'dataset': 'cifar10', 'trial': 2, 'increment': 2, 'batch_size': 128, 'workers': 8, 'validation': 0, 'random_classes': False, 'start_class': 0, 'start_task': 0, 'max_task': None, 'coreset_strategy': 'iCaRL', 'mem_size_mode': 'uniform_fixed_total_mem', 'memory_size': 2000, 'fixed_memory_per_cls': 20, 'device': 0, 'seed': 1993, 'load_mem': False, 'pretrain': {'epochs': 200, 'lr': 0.1, 'lr_decay': 0.1, 'scheduling': [60, 120, 160], 'weight_decay': 0.0005}, 'resampling': False, 'save_mem': True, 'temperature': 2, 'warmup': True, 'warmup_epochs': 10}
+
+ 2021-09-24 09:02:43,990 | INFO | root 	 classes_order
+
+ 2021-09-24 09:02:43,991 | INFO | root 	 [[4, 0, 2, 5, 8, 3, 1, 6, 9, 7]]
+
+ 2021-09-24 09:02:47,051 | INFO | root 	 Begin step 0
+
+ 2021-09-24 09:02:47,051 | INFO | root 	 Now [1000, 1000] examplars per class.
+
+ 2021-09-24 09:02:47,055 | INFO | root 	 Step 0 weight decay 0.00050
+
+ 2021-09-24 09:02:47,056 | INFO | root 	 Train on 0->2.
+
+ 2021-09-24 09:02:47,057 | INFO | root 	 nb 10000
+
+ 2021-09-24 09:02:47,062 | INFO | root 	 Initial trainset: Weight norm per class [1.023]
+
+ 2021-09-24 09:03:01,388 | INFO | root 	 Initial trainset: Feature norm per class [2.148]
+
+ 2021-09-24 09:03:07,140 | INFO | root 	 Task 1/5, Epoch 1/170 => Clf loss: 0.44 Aux loss: 0.0, Train Accu: 80.12, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:03:12,974 | INFO | root 	 Task 1/5, Epoch 2/170 => Clf loss: 0.397 Aux loss: 0.0, Train Accu: 83.72, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:03:18,822 | INFO | root 	 Task 1/5, Epoch 3/170 => Clf loss: 0.388 Aux loss: 0.0, Train Accu: 83.63, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:03:24,501 | INFO | root 	 Task 1/5, Epoch 4/170 => Clf loss: 0.389 Aux loss: 0.0, Train Accu: 83.82, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:03:30,522 | INFO | root 	 Task 1/5, Epoch 5/170 => Clf loss: 0.331 Aux loss: 0.0, Train Accu: 86.1, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:03:36,307 | INFO | root 	 Task 1/5, Epoch 6/170 => Clf loss: 0.311 Aux loss: 0.0, Train Accu: 87.7, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:03:42,187 | INFO | root 	 Task 1/5, Epoch 7/170 => Clf loss: 0.303 Aux loss: 0.0, Train Accu: 87.92, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:03:48,028 | INFO | root 	 Task 1/5, Epoch 8/170 => Clf loss: 0.274 Aux loss: 0.0, Train Accu: 88.81, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:03:53,852 | INFO | root 	 Task 1/5, Epoch 9/170 => Clf loss: 0.24 Aux loss: 0.0, Train Accu: 90.34, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:03:59,637 | INFO | root 	 Task 1/5, Epoch 10/170 => Clf loss: 0.243 Aux loss: 0.0, Train Accu: 90.58, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:04:05,433 | INFO | root 	 Task 1/5, Epoch 11/170 => Clf loss: 0.256 Aux loss: 0.0, Train Accu: 89.92, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:04:11,293 | INFO | root 	 Task 1/5, Epoch 12/170 => Clf loss: 0.2 Aux loss: 0.0, Train Accu: 92.27, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:04:17,006 | INFO | root 	 Task 1/5, Epoch 13/170 => Clf loss: 0.183 Aux loss: 0.0, Train Accu: 92.45, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:04:22,780 | INFO | root 	 Task 1/5, Epoch 14/170 => Clf loss: 0.176 Aux loss: 0.0, Train Accu: 93.24, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:04:28,664 | INFO | root 	 Task 1/5, Epoch 15/170 => Clf loss: 0.176 Aux loss: 0.0, Train Accu: 93.25, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:04:34,517 | INFO | root 	 Task 1/5, Epoch 16/170 => Clf loss: 0.154 Aux loss: 0.0, Train Accu: 93.84, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:04:40,324 | INFO | root 	 Task 1/5, Epoch 17/170 => Clf loss: 0.163 Aux loss: 0.0, Train Accu: 93.86, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:04:46,229 | INFO | root 	 Task 1/5, Epoch 18/170 => Clf loss: 0.149 Aux loss: 0.0, Train Accu: 94.51, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:04:51,918 | INFO | root 	 Task 1/5, Epoch 19/170 => Clf loss: 0.144 Aux loss: 0.0, Train Accu: 94.54, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:04:57,861 | INFO | root 	 Task 1/5, Epoch 20/170 => Clf loss: 0.139 Aux loss: 0.0, Train Accu: 94.85, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:05:03,684 | INFO | root 	 Task 1/5, Epoch 21/170 => Clf loss: 0.131 Aux loss: 0.0, Train Accu: 94.97, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:05:09,418 | INFO | root 	 Task 1/5, Epoch 22/170 => Clf loss: 0.12 Aux loss: 0.0, Train Accu: 95.35, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:05:15,398 | INFO | root 	 Task 1/5, Epoch 23/170 => Clf loss: 0.126 Aux loss: 0.0, Train Accu: 95.58, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:05:21,220 | INFO | root 	 Task 1/5, Epoch 24/170 => Clf loss: 0.139 Aux loss: 0.0, Train Accu: 94.67, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:05:27,028 | INFO | root 	 Task 1/5, Epoch 25/170 => Clf loss: 0.13 Aux loss: 0.0, Train Accu: 95.07, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:05:32,770 | INFO | root 	 Task 1/5, Epoch 26/170 => Clf loss: 0.112 Aux loss: 0.0, Train Accu: 95.51, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:05:38,576 | INFO | root 	 Task 1/5, Epoch 27/170 => Clf loss: 0.106 Aux loss: 0.0, Train Accu: 96.16, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:05:44,313 | INFO | root 	 Task 1/5, Epoch 28/170 => Clf loss: 0.102 Aux loss: 0.0, Train Accu: 96.09, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:05:50,212 | INFO | root 	 Task 1/5, Epoch 29/170 => Clf loss: 0.103 Aux loss: 0.0, Train Accu: 96.04, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:05:55,948 | INFO | root 	 Task 1/5, Epoch 30/170 => Clf loss: 0.105 Aux loss: 0.0, Train Accu: 96.22, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:06:01,731 | INFO | root 	 Task 1/5, Epoch 31/170 => Clf loss: 0.115 Aux loss: 0.0, Train Accu: 95.64, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:06:07,752 | INFO | root 	 Task 1/5, Epoch 32/170 => Clf loss: 0.131 Aux loss: 0.0, Train Accu: 94.99, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:06:13,531 | INFO | root 	 Task 1/5, Epoch 33/170 => Clf loss: 0.101 Aux loss: 0.0, Train Accu: 96.33, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:06:19,288 | INFO | root 	 Task 1/5, Epoch 34/170 => Clf loss: 0.102 Aux loss: 0.0, Train Accu: 96.08, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:06:25,204 | INFO | root 	 Task 1/5, Epoch 35/170 => Clf loss: 0.104 Aux loss: 0.0, Train Accu: 96.55, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:06:31,011 | INFO | root 	 Task 1/5, Epoch 36/170 => Clf loss: 0.105 Aux loss: 0.0, Train Accu: 95.85, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:06:36,519 | INFO | root 	 Task 1/5, Epoch 37/170 => Clf loss: 0.08 Aux loss: 0.0, Train Accu: 97.04, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:06:42,129 | INFO | root 	 Task 1/5, Epoch 38/170 => Clf loss: 0.086 Aux loss: 0.0, Train Accu: 96.8, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:06:47,901 | INFO | root 	 Task 1/5, Epoch 39/170 => Clf loss: 0.089 Aux loss: 0.0, Train Accu: 96.55, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:06:53,881 | INFO | root 	 Task 1/5, Epoch 40/170 => Clf loss: 0.067 Aux loss: 0.0, Train Accu: 97.47, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:06:59,716 | INFO | root 	 Task 1/5, Epoch 41/170 => Clf loss: 0.077 Aux loss: 0.0, Train Accu: 97.49, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:07:05,488 | INFO | root 	 Task 1/5, Epoch 42/170 => Clf loss: 0.101 Aux loss: 0.0, Train Accu: 96.34, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:07:11,185 | INFO | root 	 Task 1/5, Epoch 43/170 => Clf loss: 0.087 Aux loss: 0.0, Train Accu: 96.77, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:07:17,084 | INFO | root 	 Task 1/5, Epoch 44/170 => Clf loss: 0.067 Aux loss: 0.0, Train Accu: 97.61, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:07:23,026 | INFO | root 	 Task 1/5, Epoch 45/170 => Clf loss: 0.071 Aux loss: 0.0, Train Accu: 97.21, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:07:28,789 | INFO | root 	 Task 1/5, Epoch 46/170 => Clf loss: 0.073 Aux loss: 0.0, Train Accu: 97.35, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:07:34,700 | INFO | root 	 Task 1/5, Epoch 47/170 => Clf loss: 0.067 Aux loss: 0.0, Train Accu: 97.35, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:07:40,391 | INFO | root 	 Task 1/5, Epoch 48/170 => Clf loss: 0.07 Aux loss: 0.0, Train Accu: 97.25, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:07:46,099 | INFO | root 	 Task 1/5, Epoch 49/170 => Clf loss: 0.069 Aux loss: 0.0, Train Accu: 97.66, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:07:52,090 | INFO | root 	 Task 1/5, Epoch 50/170 => Clf loss: 0.098 Aux loss: 0.0, Train Accu: 96.33, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:07:57,746 | INFO | root 	 Task 1/5, Epoch 51/170 => Clf loss: 0.074 Aux loss: 0.0, Train Accu: 97.2, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:08:03,829 | INFO | root 	 Task 1/5, Epoch 52/170 => Clf loss: 0.069 Aux loss: 0.0, Train Accu: 97.55, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:08:09,662 | INFO | root 	 Task 1/5, Epoch 53/170 => Clf loss: 0.085 Aux loss: 0.0, Train Accu: 96.89, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:08:15,428 | INFO | root 	 Task 1/5, Epoch 54/170 => Clf loss: 0.073 Aux loss: 0.0, Train Accu: 97.25, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:08:21,313 | INFO | root 	 Task 1/5, Epoch 55/170 => Clf loss: 0.055 Aux loss: 0.0, Train Accu: 97.99, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:08:27,203 | INFO | root 	 Task 1/5, Epoch 56/170 => Clf loss: 0.064 Aux loss: 0.0, Train Accu: 97.56, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:08:32,578 | INFO | root 	 Task 1/5, Epoch 57/170 => Clf loss: 0.07 Aux loss: 0.0, Train Accu: 97.51, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:08:38,346 | INFO | root 	 Task 1/5, Epoch 58/170 => Clf loss: 0.101 Aux loss: 0.0, Train Accu: 96.18, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:08:44,326 | INFO | root 	 Task 1/5, Epoch 59/170 => Clf loss: 0.085 Aux loss: 0.0, Train Accu: 97.0, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:08:50,234 | INFO | root 	 Task 1/5, Epoch 60/170 => Clf loss: 0.103 Aux loss: 0.0, Train Accu: 96.18, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:08:56,155 | INFO | root 	 Task 1/5, Epoch 61/170 => Clf loss: 0.075 Aux loss: 0.0, Train Accu: 97.27, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:09:01,949 | INFO | root 	 Task 1/5, Epoch 62/170 => Clf loss: 0.066 Aux loss: 0.0, Train Accu: 97.51, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:09:07,927 | INFO | root 	 Task 1/5, Epoch 63/170 => Clf loss: 0.075 Aux loss: 0.0, Train Accu: 97.29, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:09:13,804 | INFO | root 	 Task 1/5, Epoch 64/170 => Clf loss: 0.058 Aux loss: 0.0, Train Accu: 97.88, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:09:19,732 | INFO | root 	 Task 1/5, Epoch 65/170 => Clf loss: 0.077 Aux loss: 0.0, Train Accu: 97.08, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:09:25,639 | INFO | root 	 Task 1/5, Epoch 66/170 => Clf loss: 0.05 Aux loss: 0.0, Train Accu: 98.06, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:09:31,523 | INFO | root 	 Task 1/5, Epoch 67/170 => Clf loss: 0.07 Aux loss: 0.0, Train Accu: 97.72, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:09:37,411 | INFO | root 	 Task 1/5, Epoch 68/170 => Clf loss: 0.085 Aux loss: 0.0, Train Accu: 97.02, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:09:43,345 | INFO | root 	 Task 1/5, Epoch 69/170 => Clf loss: 0.099 Aux loss: 0.0, Train Accu: 96.34, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:09:49,222 | INFO | root 	 Task 1/5, Epoch 70/170 => Clf loss: 0.057 Aux loss: 0.0, Train Accu: 98.01, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:09:55,123 | INFO | root 	 Task 1/5, Epoch 71/170 => Clf loss: 0.058 Aux loss: 0.0, Train Accu: 97.77, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:10:00,714 | INFO | root 	 Task 1/5, Epoch 72/170 => Clf loss: 0.047 Aux loss: 0.0, Train Accu: 98.18, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:10:06,659 | INFO | root 	 Task 1/5, Epoch 73/170 => Clf loss: 0.053 Aux loss: 0.0, Train Accu: 98.22, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:10:12,306 | INFO | root 	 Task 1/5, Epoch 74/170 => Clf loss: 0.093 Aux loss: 0.0, Train Accu: 96.61, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:10:17,872 | INFO | root 	 Task 1/5, Epoch 75/170 => Clf loss: 0.057 Aux loss: 0.0, Train Accu: 98.03, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:10:23,757 | INFO | root 	 Task 1/5, Epoch 76/170 => Clf loss: 0.079 Aux loss: 0.0, Train Accu: 97.04, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:10:29,738 | INFO | root 	 Task 1/5, Epoch 77/170 => Clf loss: 0.063 Aux loss: 0.0, Train Accu: 97.79, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:10:35,645 | INFO | root 	 Task 1/5, Epoch 78/170 => Clf loss: 0.072 Aux loss: 0.0, Train Accu: 97.67, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:10:41,397 | INFO | root 	 Task 1/5, Epoch 79/170 => Clf loss: 0.088 Aux loss: 0.0, Train Accu: 96.61, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:10:47,081 | INFO | root 	 Task 1/5, Epoch 80/170 => Clf loss: 0.107 Aux loss: 0.0, Train Accu: 96.16, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:10:53,072 | INFO | root 	 Task 1/5, Epoch 81/170 => Clf loss: 0.065 Aux loss: 0.0, Train Accu: 97.7, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:10:58,724 | INFO | root 	 Task 1/5, Epoch 82/170 => Clf loss: 0.093 Aux loss: 0.0, Train Accu: 96.37, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:11:04,510 | INFO | root 	 Task 1/5, Epoch 83/170 => Clf loss: 0.073 Aux loss: 0.0, Train Accu: 97.48, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:11:10,430 | INFO | root 	 Task 1/5, Epoch 84/170 => Clf loss: 0.075 Aux loss: 0.0, Train Accu: 97.37, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:11:16,159 | INFO | root 	 Task 1/5, Epoch 85/170 => Clf loss: 0.092 Aux loss: 0.0, Train Accu: 96.55, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:11:22,354 | INFO | root 	 Task 1/5, Epoch 86/170 => Clf loss: 0.063 Aux loss: 0.0, Train Accu: 97.96, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:11:28,122 | INFO | root 	 Task 1/5, Epoch 87/170 => Clf loss: 0.064 Aux loss: 0.0, Train Accu: 97.69, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:11:34,077 | INFO | root 	 Task 1/5, Epoch 88/170 => Clf loss: 0.047 Aux loss: 0.0, Train Accu: 98.3, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:11:39,867 | INFO | root 	 Task 1/5, Epoch 89/170 => Clf loss: 0.048 Aux loss: 0.0, Train Accu: 98.25, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:11:45,510 | INFO | root 	 Task 1/5, Epoch 90/170 => Clf loss: 0.059 Aux loss: 0.0, Train Accu: 97.96, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:11:51,412 | INFO | root 	 Task 1/5, Epoch 91/170 => Clf loss: 0.055 Aux loss: 0.0, Train Accu: 97.86, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:11:57,383 | INFO | root 	 Task 1/5, Epoch 92/170 => Clf loss: 0.054 Aux loss: 0.0, Train Accu: 98.12, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:12:03,299 | INFO | root 	 Task 1/5, Epoch 93/170 => Clf loss: 0.056 Aux loss: 0.0, Train Accu: 97.89, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:12:09,122 | INFO | root 	 Task 1/5, Epoch 94/170 => Clf loss: 0.053 Aux loss: 0.0, Train Accu: 98.1, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:12:14,982 | INFO | root 	 Task 1/5, Epoch 95/170 => Clf loss: 0.092 Aux loss: 0.0, Train Accu: 96.58, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:12:20,777 | INFO | root 	 Task 1/5, Epoch 96/170 => Clf loss: 0.075 Aux loss: 0.0, Train Accu: 97.3, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:12:26,767 | INFO | root 	 Task 1/5, Epoch 97/170 => Clf loss: 0.059 Aux loss: 0.0, Train Accu: 97.91, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:12:32,609 | INFO | root 	 Task 1/5, Epoch 98/170 => Clf loss: 0.055 Aux loss: 0.0, Train Accu: 98.22, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:12:38,553 | INFO | root 	 Task 1/5, Epoch 99/170 => Clf loss: 0.07 Aux loss: 0.0, Train Accu: 97.34, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:12:44,371 | INFO | root 	 Task 1/5, Epoch 100/170 => Clf loss: 0.06 Aux loss: 0.0, Train Accu: 97.82, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:12:50,234 | INFO | root 	 Task 1/5, Epoch 101/170 => Clf loss: 0.042 Aux loss: 0.0, Train Accu: 98.48, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:12:56,270 | INFO | root 	 Task 1/5, Epoch 102/170 => Clf loss: 0.057 Aux loss: 0.0, Train Accu: 97.98, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:13:02,140 | INFO | root 	 Task 1/5, Epoch 103/170 => Clf loss: 0.067 Aux loss: 0.0, Train Accu: 97.45, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:13:08,064 | INFO | root 	 Task 1/5, Epoch 104/170 => Clf loss: 0.059 Aux loss: 0.0, Train Accu: 97.97, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:13:13,810 | INFO | root 	 Task 1/5, Epoch 105/170 => Clf loss: 0.077 Aux loss: 0.0, Train Accu: 97.22, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:13:19,701 | INFO | root 	 Task 1/5, Epoch 106/170 => Clf loss: 0.051 Aux loss: 0.0, Train Accu: 98.19, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:13:25,635 | INFO | root 	 Task 1/5, Epoch 107/170 => Clf loss: 0.092 Aux loss: 0.0, Train Accu: 97.14, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:13:31,385 | INFO | root 	 Task 1/5, Epoch 108/170 => Clf loss: 0.103 Aux loss: 0.0, Train Accu: 96.16, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:13:37,169 | INFO | root 	 Task 1/5, Epoch 109/170 => Clf loss: 0.061 Aux loss: 0.0, Train Accu: 97.84, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:13:42,949 | INFO | root 	 Task 1/5, Epoch 110/170 => Clf loss: 0.069 Aux loss: 0.0, Train Accu: 97.5, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:13:48,793 | INFO | root 	 Task 1/5, Epoch 111/170 => Clf loss: 0.046 Aux loss: 0.0, Train Accu: 98.68, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:13:54,696 | INFO | root 	 Task 1/5, Epoch 112/170 => Clf loss: 0.027 Aux loss: 0.0, Train Accu: 99.18, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:14:00,608 | INFO | root 	 Task 1/5, Epoch 113/170 => Clf loss: 0.025 Aux loss: 0.0, Train Accu: 99.26, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:14:06,455 | INFO | root 	 Task 1/5, Epoch 114/170 => Clf loss: 0.036 Aux loss: 0.0, Train Accu: 99.24, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:14:12,318 | INFO | root 	 Task 1/5, Epoch 115/170 => Clf loss: 0.024 Aux loss: 0.0, Train Accu: 99.19, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:14:18,299 | INFO | root 	 Task 1/5, Epoch 116/170 => Clf loss: 0.019 Aux loss: 0.0, Train Accu: 99.41, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:14:24,314 | INFO | root 	 Task 1/5, Epoch 117/170 => Clf loss: 0.017 Aux loss: 0.0, Train Accu: 99.47, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:14:30,200 | INFO | root 	 Task 1/5, Epoch 118/170 => Clf loss: 0.015 Aux loss: 0.0, Train Accu: 99.6, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:14:36,307 | INFO | root 	 Task 1/5, Epoch 119/170 => Clf loss: 0.013 Aux loss: 0.0, Train Accu: 99.65, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:14:42,356 | INFO | root 	 Task 1/5, Epoch 120/170 => Clf loss: 0.016 Aux loss: 0.0, Train Accu: 99.57, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:14:48,206 | INFO | root 	 Task 1/5, Epoch 121/170 => Clf loss: 0.018 Aux loss: 0.0, Train Accu: 99.59, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:14:54,050 | INFO | root 	 Task 1/5, Epoch 122/170 => Clf loss: 0.012 Aux loss: 0.0, Train Accu: 99.63, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:14:59,777 | INFO | root 	 Task 1/5, Epoch 123/170 => Clf loss: 0.01 Aux loss: 0.0, Train Accu: 99.77, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:15:05,480 | INFO | root 	 Task 1/5, Epoch 124/170 => Clf loss: 0.011 Aux loss: 0.0, Train Accu: 99.71, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:15:11,172 | INFO | root 	 Task 1/5, Epoch 125/170 => Clf loss: 0.014 Aux loss: 0.0, Train Accu: 99.65, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:15:17,174 | INFO | root 	 Task 1/5, Epoch 126/170 => Clf loss: 0.014 Aux loss: 0.0, Train Accu: 99.62, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:15:23,034 | INFO | root 	 Task 1/5, Epoch 127/170 => Clf loss: 0.011 Aux loss: 0.0, Train Accu: 99.68, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:15:29,030 | INFO | root 	 Task 1/5, Epoch 128/170 => Clf loss: 0.007 Aux loss: 0.0, Train Accu: 99.81, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:15:34,781 | INFO | root 	 Task 1/5, Epoch 129/170 => Clf loss: 0.011 Aux loss: 0.0, Train Accu: 99.84, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:15:40,540 | INFO | root 	 Task 1/5, Epoch 130/170 => Clf loss: 0.013 Aux loss: 0.0, Train Accu: 99.72, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:15:46,404 | INFO | root 	 Task 1/5, Epoch 131/170 => Clf loss: 0.01 Aux loss: 0.0, Train Accu: 99.76, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:15:52,345 | INFO | root 	 Task 1/5, Epoch 132/170 => Clf loss: 0.009 Aux loss: 0.0, Train Accu: 99.7, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:15:58,129 | INFO | root 	 Task 1/5, Epoch 133/170 => Clf loss: 0.01 Aux loss: 0.0, Train Accu: 99.86, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:16:03,824 | INFO | root 	 Task 1/5, Epoch 134/170 => Clf loss: 0.009 Aux loss: 0.0, Train Accu: 99.83, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:16:09,671 | INFO | root 	 Task 1/5, Epoch 135/170 => Clf loss: 0.008 Aux loss: 0.0, Train Accu: 99.79, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:16:15,584 | INFO | root 	 Task 1/5, Epoch 136/170 => Clf loss: 0.006 Aux loss: 0.0, Train Accu: 99.89, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:16:21,495 | INFO | root 	 Task 1/5, Epoch 137/170 => Clf loss: 0.007 Aux loss: 0.0, Train Accu: 99.87, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:16:27,343 | INFO | root 	 Task 1/5, Epoch 138/170 => Clf loss: 0.007 Aux loss: 0.0, Train Accu: 99.85, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:16:33,253 | INFO | root 	 Task 1/5, Epoch 139/170 => Clf loss: 0.005 Aux loss: 0.0, Train Accu: 99.93, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:16:39,158 | INFO | root 	 Task 1/5, Epoch 140/170 => Clf loss: 0.006 Aux loss: 0.0, Train Accu: 99.85, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:16:45,019 | INFO | root 	 Task 1/5, Epoch 141/170 => Clf loss: 0.007 Aux loss: 0.0, Train Accu: 99.83, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:16:50,783 | INFO | root 	 Task 1/5, Epoch 142/170 => Clf loss: 0.005 Aux loss: 0.0, Train Accu: 99.92, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:16:56,533 | INFO | root 	 Task 1/5, Epoch 143/170 => Clf loss: 0.005 Aux loss: 0.0, Train Accu: 99.9, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:17:02,516 | INFO | root 	 Task 1/5, Epoch 144/170 => Clf loss: 0.006 Aux loss: 0.0, Train Accu: 99.85, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:17:08,437 | INFO | root 	 Task 1/5, Epoch 145/170 => Clf loss: 0.005 Aux loss: 0.0, Train Accu: 99.87, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:17:14,319 | INFO | root 	 Task 1/5, Epoch 146/170 => Clf loss: 0.006 Aux loss: 0.0, Train Accu: 99.85, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:17:20,176 | INFO | root 	 Task 1/5, Epoch 147/170 => Clf loss: 0.011 Aux loss: 0.0, Train Accu: 99.86, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:17:26,067 | INFO | root 	 Task 1/5, Epoch 148/170 => Clf loss: 0.007 Aux loss: 0.0, Train Accu: 99.85, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:17:31,887 | INFO | root 	 Task 1/5, Epoch 149/170 => Clf loss: 0.006 Aux loss: 0.0, Train Accu: 99.92, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:17:37,882 | INFO | root 	 Task 1/5, Epoch 150/170 => Clf loss: 0.007 Aux loss: 0.0, Train Accu: 99.87, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:17:43,728 | INFO | root 	 Task 1/5, Epoch 151/170 => Clf loss: 0.006 Aux loss: 0.0, Train Accu: 99.88, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:17:49,702 | INFO | root 	 Task 1/5, Epoch 152/170 => Clf loss: 0.006 Aux loss: 0.0, Train Accu: 99.84, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:17:55,626 | INFO | root 	 Task 1/5, Epoch 153/170 => Clf loss: 0.005 Aux loss: 0.0, Train Accu: 99.87, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:18:01,547 | INFO | root 	 Task 1/5, Epoch 154/170 => Clf loss: 0.005 Aux loss: 0.0, Train Accu: 99.9, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:18:07,458 | INFO | root 	 Task 1/5, Epoch 155/170 => Clf loss: 0.01 Aux loss: 0.0, Train Accu: 99.85, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:18:13,412 | INFO | root 	 Task 1/5, Epoch 156/170 => Clf loss: 0.005 Aux loss: 0.0, Train Accu: 99.9, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:18:19,336 | INFO | root 	 Task 1/5, Epoch 157/170 => Clf loss: 0.009 Aux loss: 0.0, Train Accu: 99.86, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:18:25,276 | INFO | root 	 Task 1/5, Epoch 158/170 => Clf loss: 0.005 Aux loss: 0.0, Train Accu: 99.94, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:18:30,997 | INFO | root 	 Task 1/5, Epoch 159/170 => Clf loss: 0.007 Aux loss: 0.0, Train Accu: 99.94, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:18:36,945 | INFO | root 	 Task 1/5, Epoch 160/170 => Clf loss: 0.008 Aux loss: 0.0, Train Accu: 99.84, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:18:42,793 | INFO | root 	 Task 1/5, Epoch 161/170 => Clf loss: 0.012 Aux loss: 0.0, Train Accu: 99.87, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:18:48,677 | INFO | root 	 Task 1/5, Epoch 162/170 => Clf loss: 0.005 Aux loss: 0.0, Train Accu: 99.92, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:18:54,449 | INFO | root 	 Task 1/5, Epoch 163/170 => Clf loss: 0.006 Aux loss: 0.0, Train Accu: 99.89, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:19:00,309 | INFO | root 	 Task 1/5, Epoch 164/170 => Clf loss: 0.005 Aux loss: 0.0, Train Accu: 99.93, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:19:06,245 | INFO | root 	 Task 1/5, Epoch 165/170 => Clf loss: 0.004 Aux loss: 0.0, Train Accu: 99.93, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:19:12,206 | INFO | root 	 Task 1/5, Epoch 166/170 => Clf loss: 0.004 Aux loss: 0.0, Train Accu: 99.92, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:19:17,989 | INFO | root 	 Task 1/5, Epoch 167/170 => Clf loss: 0.01 Aux loss: 0.0, Train Accu: 99.9, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:19:23,825 | INFO | root 	 Task 1/5, Epoch 168/170 => Clf loss: 0.005 Aux loss: 0.0, Train Accu: 99.87, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:19:29,775 | INFO | root 	 Task 1/5, Epoch 169/170 => Clf loss: 0.007 Aux loss: 0.0, Train Accu: 99.8, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:19:35,505 | INFO | root 	 Task 1/5, Epoch 170/170 => Clf loss: 0.005 Aux loss: 0.0, Train Accu: 99.92, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:19:35,507 | INFO | root 	 After training: Weight norm per class [2.536]
+
+ 2021-09-24 09:19:42,820 | INFO | root 	 Trainset: Feature norm per class [2.816]
+
+ 2021-09-24 09:19:42,842 | INFO | root 	 save model
+
+ 2021-09-24 09:19:43,019 | INFO | root 	 build memory
+
+ 2021-09-24 09:19:43,019 | INFO | root 	 Building & updating memory.(iCaRL)
+
+ 2021-09-24 09:19:47,812 | INFO | root 	 Save step0 memory!
+
+ 2021-09-24 09:19:47,829 | INFO | root 	 Eval on 0->2.
+
+ 2021-09-24 09:19:49,006 | INFO | root 	 top1:{'total': 98.9, '00-01': 98.9}
+
+ 2021-09-24 09:19:49,007 | INFO | root 	 top5:{'total': 100.0, '00-01': 100.0}
+
+ 2021-09-24 09:19:49,445 | INFO | root 	 Begin step 1
+
+ 2021-09-24 09:19:49,445 | INFO | root 	 Now [500, 500, 500, 500] examplars per class.
+
+ 2021-09-24 09:19:49,742 | INFO | root 	 Step 1 weight decay 0.00050
+
+ 2021-09-24 09:19:49,746 | INFO | root 	 Train on 2->4.
+
+ 2021-09-24 09:19:49,747 | INFO | root 	 nb 11461
+
+ 2021-09-24 09:19:49,748 | INFO | root 	 Initial trainset: Weight norm per class [0.974, 0.97]
+
+ 2021-09-24 09:20:02,674 | INFO | root 	 Initial trainset: Feature norm per class [3.922, 2.889]
+
+ 2021-09-24 09:20:12,438 | INFO | root 	 Task 2/5, Epoch 1/170 => Clf loss: 0.803 Aux loss: 0.77, Train Accu: 67.315, Train@5 Acc: 91.214, old acc:nan
+
+ 2021-09-24 09:20:22,147 | INFO | root 	 Task 2/5, Epoch 2/170 => Clf loss: 0.491 Aux loss: 0.534, Train Accu: 80.822, Train@5 Acc: 96.109, old acc:nan
+
+ 2021-09-24 09:20:31,607 | INFO | root 	 Task 2/5, Epoch 3/170 => Clf loss: 0.42 Aux loss: 0.464, Train Accu: 83.3, Train@5 Acc: 96.911, old acc:nan
+
+ 2021-09-24 09:20:41,247 | INFO | root 	 Task 2/5, Epoch 4/170 => Clf loss: 0.389 Aux loss: 0.434, Train Accu: 84.801, Train@5 Acc: 97.321, old acc:nan
+
+ 2021-09-24 09:20:50,832 | INFO | root 	 Task 2/5, Epoch 5/170 => Clf loss: 0.367 Aux loss: 0.412, Train Accu: 85.839, Train@5 Acc: 97.557, old acc:nan
+
+ 2021-09-24 09:21:00,490 | INFO | root 	 Task 2/5, Epoch 6/170 => Clf loss: 0.352 Aux loss: 0.396, Train Accu: 86.328, Train@5 Acc: 97.801, old acc:nan
+
+ 2021-09-24 09:21:10,238 | INFO | root 	 Task 2/5, Epoch 7/170 => Clf loss: 0.343 Aux loss: 0.385, Train Accu: 86.476, Train@5 Acc: 98.002, old acc:nan
+
+ 2021-09-24 09:21:19,771 | INFO | root 	 Task 2/5, Epoch 8/170 => Clf loss: 0.339 Aux loss: 0.379, Train Accu: 86.834, Train@5 Acc: 98.115, old acc:nan
+
+ 2021-09-24 09:21:29,297 | INFO | root 	 Task 2/5, Epoch 9/170 => Clf loss: 0.316 Aux loss: 0.355, Train Accu: 87.505, Train@5 Acc: 98.299, old acc:nan
+
+ 2021-09-24 09:21:38,872 | INFO | root 	 Task 2/5, Epoch 10/170 => Clf loss: 0.307 Aux loss: 0.347, Train Accu: 88.125, Train@5 Acc: 98.185, old acc:nan
+
+ 2021-09-24 09:21:48,503 | INFO | root 	 Task 2/5, Epoch 11/170 => Clf loss: 0.372 Aux loss: 0.382, Train Accu: 85.813, Train@5 Acc: 96.362, old acc:nan
+
+ 2021-09-24 09:21:58,073 | INFO | root 	 Task 2/5, Epoch 12/170 => Clf loss: 0.287 Aux loss: 0.316, Train Accu: 88.98, Train@5 Acc: 98.36, old acc:nan
+
+ 2021-09-24 09:22:07,629 | INFO | root 	 Task 2/5, Epoch 13/170 => Clf loss: 0.273 Aux loss: 0.305, Train Accu: 89.512, Train@5 Acc: 98.543, old acc:nan
+
+ 2021-09-24 09:22:17,008 | INFO | root 	 Task 2/5, Epoch 14/170 => Clf loss: 0.255 Aux loss: 0.282, Train Accu: 90.228, Train@5 Acc: 98.525, old acc:nan
+
+ 2021-09-24 09:22:26,559 | INFO | root 	 Task 2/5, Epoch 15/170 => Clf loss: 0.244 Aux loss: 0.273, Train Accu: 90.751, Train@5 Acc: 98.796, old acc:nan
+
+ 2021-09-24 09:22:36,047 | INFO | root 	 Task 2/5, Epoch 16/170 => Clf loss: 0.239 Aux loss: 0.265, Train Accu: 90.821, Train@5 Acc: 98.7, old acc:nan
+
+ 2021-09-24 09:22:45,525 | INFO | root 	 Task 2/5, Epoch 17/170 => Clf loss: 0.233 Aux loss: 0.259, Train Accu: 91.153, Train@5 Acc: 98.691, old acc:nan
+
+ 2021-09-24 09:22:54,726 | INFO | root 	 Task 2/5, Epoch 18/170 => Clf loss: 0.227 Aux loss: 0.252, Train Accu: 91.388, Train@5 Acc: 98.944, old acc:nan
+
+ 2021-09-24 09:23:04,258 | INFO | root 	 Task 2/5, Epoch 19/170 => Clf loss: 0.212 Aux loss: 0.236, Train Accu: 91.807, Train@5 Acc: 99.014, old acc:nan
+
+ 2021-09-24 09:23:13,624 | INFO | root 	 Task 2/5, Epoch 20/170 => Clf loss: 0.209 Aux loss: 0.231, Train Accu: 91.763, Train@5 Acc: 99.014, old acc:nan
+
+ 2021-09-24 09:23:23,346 | INFO | root 	 Task 2/5, Epoch 21/170 => Clf loss: 0.194 Aux loss: 0.216, Train Accu: 92.784, Train@5 Acc: 99.154, old acc:nan
+
+ 2021-09-24 09:23:32,904 | INFO | root 	 Task 2/5, Epoch 22/170 => Clf loss: 0.206 Aux loss: 0.226, Train Accu: 92.453, Train@5 Acc: 98.979, old acc:nan
+
+ 2021-09-24 09:23:42,330 | INFO | root 	 Task 2/5, Epoch 23/170 => Clf loss: 0.187 Aux loss: 0.211, Train Accu: 92.906, Train@5 Acc: 99.136, old acc:nan
+
+ 2021-09-24 09:23:51,748 | INFO | root 	 Task 2/5, Epoch 24/170 => Clf loss: 0.187 Aux loss: 0.21, Train Accu: 92.924, Train@5 Acc: 99.058, old acc:nan
+
+ 2021-09-24 09:24:01,392 | INFO | root 	 Task 2/5, Epoch 25/170 => Clf loss: 0.188 Aux loss: 0.208, Train Accu: 92.81, Train@5 Acc: 99.197, old acc:nan
+
+ 2021-09-24 09:24:10,775 | INFO | root 	 Task 2/5, Epoch 26/170 => Clf loss: 0.178 Aux loss: 0.201, Train Accu: 93.508, Train@5 Acc: 99.145, old acc:nan
+
+ 2021-09-24 09:24:20,423 | INFO | root 	 Task 2/5, Epoch 27/170 => Clf loss: 0.184 Aux loss: 0.204, Train Accu: 92.837, Train@5 Acc: 99.171, old acc:nan
+
+ 2021-09-24 09:24:29,972 | INFO | root 	 Task 2/5, Epoch 28/170 => Clf loss: 0.173 Aux loss: 0.195, Train Accu: 93.596, Train@5 Acc: 99.258, old acc:nan
+
+ 2021-09-24 09:24:39,707 | INFO | root 	 Task 2/5, Epoch 29/170 => Clf loss: 0.166 Aux loss: 0.187, Train Accu: 93.814, Train@5 Acc: 99.389, old acc:nan
+
+ 2021-09-24 09:24:49,281 | INFO | root 	 Task 2/5, Epoch 30/170 => Clf loss: 0.162 Aux loss: 0.182, Train Accu: 93.91, Train@5 Acc: 99.424, old acc:nan
+
+ 2021-09-24 09:24:59,110 | INFO | root 	 Task 2/5, Epoch 31/170 => Clf loss: 0.162 Aux loss: 0.183, Train Accu: 93.988, Train@5 Acc: 99.25, old acc:nan
+
+ 2021-09-24 09:25:08,724 | INFO | root 	 Task 2/5, Epoch 32/170 => Clf loss: 0.163 Aux loss: 0.184, Train Accu: 93.718, Train@5 Acc: 99.293, old acc:nan
+
+ 2021-09-24 09:25:18,512 | INFO | root 	 Task 2/5, Epoch 33/170 => Clf loss: 0.155 Aux loss: 0.172, Train Accu: 94.032, Train@5 Acc: 99.372, old acc:nan
+
+ 2021-09-24 09:25:28,361 | INFO | root 	 Task 2/5, Epoch 34/170 => Clf loss: 0.155 Aux loss: 0.175, Train Accu: 94.39, Train@5 Acc: 99.494, old acc:nan
+
+ 2021-09-24 09:25:38,076 | INFO | root 	 Task 2/5, Epoch 35/170 => Clf loss: 0.161 Aux loss: 0.18, Train Accu: 93.814, Train@5 Acc: 99.398, old acc:nan
+
+ 2021-09-24 09:25:47,408 | INFO | root 	 Task 2/5, Epoch 36/170 => Clf loss: 0.157 Aux loss: 0.175, Train Accu: 94.172, Train@5 Acc: 99.389, old acc:nan
+
+ 2021-09-24 09:25:57,162 | INFO | root 	 Task 2/5, Epoch 37/170 => Clf loss: 0.151 Aux loss: 0.17, Train Accu: 94.32, Train@5 Acc: 99.389, old acc:nan
+
+ 2021-09-24 09:26:06,896 | INFO | root 	 Task 2/5, Epoch 38/170 => Clf loss: 0.142 Aux loss: 0.16, Train Accu: 94.808, Train@5 Acc: 99.372, old acc:nan
+
+ 2021-09-24 09:26:16,615 | INFO | root 	 Task 2/5, Epoch 39/170 => Clf loss: 0.144 Aux loss: 0.163, Train Accu: 94.747, Train@5 Acc: 99.45, old acc:nan
+
+ 2021-09-24 09:26:26,465 | INFO | root 	 Task 2/5, Epoch 40/170 => Clf loss: 0.143 Aux loss: 0.161, Train Accu: 94.756, Train@5 Acc: 99.381, old acc:nan
+
+ 2021-09-24 09:26:36,540 | INFO | root 	 Task 2/5, Epoch 41/170 => Clf loss: 0.141 Aux loss: 0.158, Train Accu: 94.808, Train@5 Acc: 99.494, old acc:nan
+
+ 2021-09-24 09:26:46,324 | INFO | root 	 Task 2/5, Epoch 42/170 => Clf loss: 0.143 Aux loss: 0.16, Train Accu: 94.73, Train@5 Acc: 99.415, old acc:nan
+
+ 2021-09-24 09:26:55,877 | INFO | root 	 Task 2/5, Epoch 43/170 => Clf loss: 0.14 Aux loss: 0.157, Train Accu: 94.913, Train@5 Acc: 99.398, old acc:nan
+
+ 2021-09-24 09:27:05,692 | INFO | root 	 Task 2/5, Epoch 44/170 => Clf loss: 0.128 Aux loss: 0.146, Train Accu: 95.384, Train@5 Acc: 99.572, old acc:nan
+
+ 2021-09-24 09:27:15,409 | INFO | root 	 Task 2/5, Epoch 45/170 => Clf loss: 0.14 Aux loss: 0.156, Train Accu: 94.896, Train@5 Acc: 99.476, old acc:nan
+
+ 2021-09-24 09:27:25,010 | INFO | root 	 Task 2/5, Epoch 46/170 => Clf loss: 0.14 Aux loss: 0.157, Train Accu: 94.538, Train@5 Acc: 99.494, old acc:nan
+
+ 2021-09-24 09:27:34,239 | INFO | root 	 Task 2/5, Epoch 47/170 => Clf loss: 0.127 Aux loss: 0.142, Train Accu: 95.472, Train@5 Acc: 99.538, old acc:nan
+
+ 2021-09-24 09:27:43,760 | INFO | root 	 Task 2/5, Epoch 48/170 => Clf loss: 0.132 Aux loss: 0.147, Train Accu: 95.105, Train@5 Acc: 99.538, old acc:nan
+
+ 2021-09-24 09:27:53,536 | INFO | root 	 Task 2/5, Epoch 49/170 => Clf loss: 0.133 Aux loss: 0.149, Train Accu: 95.149, Train@5 Acc: 99.511, old acc:nan
+
+ 2021-09-24 09:28:02,989 | INFO | root 	 Task 2/5, Epoch 50/170 => Clf loss: 0.135 Aux loss: 0.153, Train Accu: 95.009, Train@5 Acc: 99.459, old acc:nan
+
+ 2021-09-24 09:28:12,623 | INFO | root 	 Task 2/5, Epoch 51/170 => Clf loss: 0.137 Aux loss: 0.153, Train Accu: 94.913, Train@5 Acc: 99.511, old acc:nan
+
+ 2021-09-24 09:28:22,210 | INFO | root 	 Task 2/5, Epoch 52/170 => Clf loss: 0.131 Aux loss: 0.148, Train Accu: 95.306, Train@5 Acc: 99.485, old acc:nan
+
+ 2021-09-24 09:28:31,489 | INFO | root 	 Task 2/5, Epoch 53/170 => Clf loss: 0.129 Aux loss: 0.145, Train Accu: 95.419, Train@5 Acc: 99.476, old acc:nan
+
+ 2021-09-24 09:28:41,512 | INFO | root 	 Task 2/5, Epoch 54/170 => Clf loss: 0.125 Aux loss: 0.142, Train Accu: 95.48, Train@5 Acc: 99.607, old acc:nan
+
+ 2021-09-24 09:28:51,273 | INFO | root 	 Task 2/5, Epoch 55/170 => Clf loss: 0.122 Aux loss: 0.136, Train Accu: 95.349, Train@5 Acc: 99.546, old acc:nan
+
+ 2021-09-24 09:29:01,136 | INFO | root 	 Task 2/5, Epoch 56/170 => Clf loss: 0.125 Aux loss: 0.139, Train Accu: 95.175, Train@5 Acc: 99.564, old acc:nan
+
+ 2021-09-24 09:29:10,650 | INFO | root 	 Task 2/5, Epoch 57/170 => Clf loss: 0.114 Aux loss: 0.13, Train Accu: 95.664, Train@5 Acc: 99.572, old acc:nan
+
+ 2021-09-24 09:29:20,482 | INFO | root 	 Task 2/5, Epoch 58/170 => Clf loss: 0.127 Aux loss: 0.143, Train Accu: 95.393, Train@5 Acc: 99.546, old acc:nan
+
+ 2021-09-24 09:29:30,187 | INFO | root 	 Task 2/5, Epoch 59/170 => Clf loss: 0.124 Aux loss: 0.138, Train Accu: 95.402, Train@5 Acc: 99.564, old acc:nan
+
+ 2021-09-24 09:29:39,641 | INFO | root 	 Task 2/5, Epoch 60/170 => Clf loss: 0.12 Aux loss: 0.136, Train Accu: 95.463, Train@5 Acc: 99.616, old acc:nan
+
+ 2021-09-24 09:29:49,330 | INFO | root 	 Task 2/5, Epoch 61/170 => Clf loss: 0.121 Aux loss: 0.135, Train Accu: 95.568, Train@5 Acc: 99.564, old acc:nan
+
+ 2021-09-24 09:29:58,608 | INFO | root 	 Task 2/5, Epoch 62/170 => Clf loss: 0.133 Aux loss: 0.148, Train Accu: 95.062, Train@5 Acc: 99.52, old acc:nan
+
+ 2021-09-24 09:30:07,902 | INFO | root 	 Task 2/5, Epoch 63/170 => Clf loss: 0.101 Aux loss: 0.116, Train Accu: 96.257, Train@5 Acc: 99.703, old acc:nan
+
+ 2021-09-24 09:30:17,656 | INFO | root 	 Task 2/5, Epoch 64/170 => Clf loss: 0.116 Aux loss: 0.132, Train Accu: 95.681, Train@5 Acc: 99.642, old acc:nan
+
+ 2021-09-24 09:30:27,042 | INFO | root 	 Task 2/5, Epoch 65/170 => Clf loss: 0.123 Aux loss: 0.135, Train Accu: 95.498, Train@5 Acc: 99.529, old acc:nan
+
+ 2021-09-24 09:30:36,639 | INFO | root 	 Task 2/5, Epoch 66/170 => Clf loss: 0.118 Aux loss: 0.131, Train Accu: 95.812, Train@5 Acc: 99.476, old acc:nan
+
+ 2021-09-24 09:30:46,099 | INFO | root 	 Task 2/5, Epoch 67/170 => Clf loss: 0.114 Aux loss: 0.127, Train Accu: 95.969, Train@5 Acc: 99.625, old acc:nan
+
+ 2021-09-24 09:30:55,726 | INFO | root 	 Task 2/5, Epoch 68/170 => Clf loss: 0.117 Aux loss: 0.13, Train Accu: 95.568, Train@5 Acc: 99.503, old acc:nan
+
+ 2021-09-24 09:31:05,033 | INFO | root 	 Task 2/5, Epoch 69/170 => Clf loss: 0.101 Aux loss: 0.113, Train Accu: 96.309, Train@5 Acc: 99.668, old acc:nan
+
+ 2021-09-24 09:31:14,614 | INFO | root 	 Task 2/5, Epoch 70/170 => Clf loss: 0.122 Aux loss: 0.138, Train Accu: 95.376, Train@5 Acc: 99.52, old acc:nan
+
+ 2021-09-24 09:31:24,175 | INFO | root 	 Task 2/5, Epoch 71/170 => Clf loss: 0.114 Aux loss: 0.128, Train Accu: 95.62, Train@5 Acc: 99.642, old acc:nan
+
+ 2021-09-24 09:31:33,826 | INFO | root 	 Task 2/5, Epoch 72/170 => Clf loss: 0.123 Aux loss: 0.139, Train Accu: 95.323, Train@5 Acc: 99.616, old acc:nan
+
+ 2021-09-24 09:31:43,524 | INFO | root 	 Task 2/5, Epoch 73/170 => Clf loss: 0.114 Aux loss: 0.127, Train Accu: 95.725, Train@5 Acc: 99.616, old acc:nan
+
+ 2021-09-24 09:31:53,142 | INFO | root 	 Task 2/5, Epoch 74/170 => Clf loss: 0.115 Aux loss: 0.129, Train Accu: 95.794, Train@5 Acc: 99.555, old acc:nan
+
+ 2021-09-24 09:32:02,881 | INFO | root 	 Task 2/5, Epoch 75/170 => Clf loss: 0.118 Aux loss: 0.129, Train Accu: 95.646, Train@5 Acc: 99.581, old acc:nan
+
+ 2021-09-24 09:32:12,522 | INFO | root 	 Task 2/5, Epoch 76/170 => Clf loss: 0.1 Aux loss: 0.112, Train Accu: 96.187, Train@5 Acc: 99.651, old acc:nan
+
+ 2021-09-24 09:32:22,220 | INFO | root 	 Task 2/5, Epoch 77/170 => Clf loss: 0.123 Aux loss: 0.138, Train Accu: 95.384, Train@5 Acc: 99.529, old acc:nan
+
+ 2021-09-24 09:32:31,867 | INFO | root 	 Task 2/5, Epoch 78/170 => Clf loss: 0.114 Aux loss: 0.13, Train Accu: 95.908, Train@5 Acc: 99.651, old acc:nan
+
+ 2021-09-24 09:32:41,520 | INFO | root 	 Task 2/5, Epoch 79/170 => Clf loss: 0.105 Aux loss: 0.116, Train Accu: 96.274, Train@5 Acc: 99.599, old acc:nan
+
+ 2021-09-24 09:32:50,934 | INFO | root 	 Task 2/5, Epoch 80/170 => Clf loss: 0.117 Aux loss: 0.133, Train Accu: 95.646, Train@5 Acc: 99.564, old acc:nan
+
+ 2021-09-24 09:33:00,453 | INFO | root 	 Task 2/5, Epoch 81/170 => Clf loss: 0.109 Aux loss: 0.124, Train Accu: 95.681, Train@5 Acc: 99.572, old acc:nan
+
+ 2021-09-24 09:33:10,314 | INFO | root 	 Task 2/5, Epoch 82/170 => Clf loss: 0.114 Aux loss: 0.128, Train Accu: 95.602, Train@5 Acc: 99.66, old acc:nan
+
+ 2021-09-24 09:33:19,855 | INFO | root 	 Task 2/5, Epoch 83/170 => Clf loss: 0.113 Aux loss: 0.127, Train Accu: 96.039, Train@5 Acc: 99.546, old acc:nan
+
+ 2021-09-24 09:33:29,387 | INFO | root 	 Task 2/5, Epoch 84/170 => Clf loss: 0.118 Aux loss: 0.13, Train Accu: 95.742, Train@5 Acc: 99.546, old acc:nan
+
+ 2021-09-24 09:33:39,159 | INFO | root 	 Task 2/5, Epoch 85/170 => Clf loss: 0.101 Aux loss: 0.114, Train Accu: 96.257, Train@5 Acc: 99.651, old acc:nan
+
+ 2021-09-24 09:33:48,490 | INFO | root 	 Task 2/5, Epoch 86/170 => Clf loss: 0.118 Aux loss: 0.131, Train Accu: 95.629, Train@5 Acc: 99.686, old acc:nan
+
+ 2021-09-24 09:33:58,240 | INFO | root 	 Task 2/5, Epoch 87/170 => Clf loss: 0.099 Aux loss: 0.113, Train Accu: 96.423, Train@5 Acc: 99.703, old acc:nan
+
+ 2021-09-24 09:34:07,917 | INFO | root 	 Task 2/5, Epoch 88/170 => Clf loss: 0.099 Aux loss: 0.114, Train Accu: 96.257, Train@5 Acc: 99.747, old acc:nan
+
+ 2021-09-24 09:34:17,344 | INFO | root 	 Task 2/5, Epoch 89/170 => Clf loss: 0.114 Aux loss: 0.126, Train Accu: 95.821, Train@5 Acc: 99.572, old acc:nan
+
+ 2021-09-24 09:34:27,002 | INFO | root 	 Task 2/5, Epoch 90/170 => Clf loss: 0.096 Aux loss: 0.108, Train Accu: 96.545, Train@5 Acc: 99.73, old acc:nan
+
+ 2021-09-24 09:34:36,670 | INFO | root 	 Task 2/5, Epoch 91/170 => Clf loss: 0.109 Aux loss: 0.123, Train Accu: 96.056, Train@5 Acc: 99.695, old acc:nan
+
+ 2021-09-24 09:34:45,809 | INFO | root 	 Task 2/5, Epoch 92/170 => Clf loss: 0.11 Aux loss: 0.123, Train Accu: 96.03, Train@5 Acc: 99.616, old acc:nan
+
+ 2021-09-24 09:34:55,442 | INFO | root 	 Task 2/5, Epoch 93/170 => Clf loss: 0.101 Aux loss: 0.113, Train Accu: 96.327, Train@5 Acc: 99.712, old acc:nan
+
+ 2021-09-24 09:35:04,880 | INFO | root 	 Task 2/5, Epoch 94/170 => Clf loss: 0.11 Aux loss: 0.124, Train Accu: 96.065, Train@5 Acc: 99.572, old acc:nan
+
+ 2021-09-24 09:35:14,468 | INFO | root 	 Task 2/5, Epoch 95/170 => Clf loss: 0.098 Aux loss: 0.11, Train Accu: 96.501, Train@5 Acc: 99.651, old acc:nan
+
+ 2021-09-24 09:35:24,345 | INFO | root 	 Task 2/5, Epoch 96/170 => Clf loss: 0.116 Aux loss: 0.131, Train Accu: 95.716, Train@5 Acc: 99.564, old acc:nan
+
+ 2021-09-24 09:35:33,831 | INFO | root 	 Task 2/5, Epoch 97/170 => Clf loss: 0.114 Aux loss: 0.125, Train Accu: 95.76, Train@5 Acc: 99.634, old acc:nan
+
+ 2021-09-24 09:35:43,557 | INFO | root 	 Task 2/5, Epoch 98/170 => Clf loss: 0.107 Aux loss: 0.122, Train Accu: 96.353, Train@5 Acc: 99.59, old acc:nan
+
+ 2021-09-24 09:35:53,319 | INFO | root 	 Task 2/5, Epoch 99/170 => Clf loss: 0.1 Aux loss: 0.115, Train Accu: 96.492, Train@5 Acc: 99.712, old acc:nan
+
+ 2021-09-24 09:36:03,142 | INFO | root 	 Task 2/5, Epoch 100/170 => Clf loss: 0.109 Aux loss: 0.123, Train Accu: 96.056, Train@5 Acc: 99.756, old acc:nan
+
+ 2021-09-24 09:36:13,093 | INFO | root 	 Task 2/5, Epoch 101/170 => Clf loss: 0.111 Aux loss: 0.122, Train Accu: 96.135, Train@5 Acc: 99.651, old acc:nan
+
+ 2021-09-24 09:36:22,721 | INFO | root 	 Task 2/5, Epoch 102/170 => Clf loss: 0.109 Aux loss: 0.125, Train Accu: 96.013, Train@5 Acc: 99.607, old acc:nan
+
+ 2021-09-24 09:36:32,496 | INFO | root 	 Task 2/5, Epoch 103/170 => Clf loss: 0.093 Aux loss: 0.105, Train Accu: 96.641, Train@5 Acc: 99.607, old acc:nan
+
+ 2021-09-24 09:36:42,190 | INFO | root 	 Task 2/5, Epoch 104/170 => Clf loss: 0.098 Aux loss: 0.113, Train Accu: 96.423, Train@5 Acc: 99.73, old acc:nan
+
+ 2021-09-24 09:36:51,910 | INFO | root 	 Task 2/5, Epoch 105/170 => Clf loss: 0.105 Aux loss: 0.119, Train Accu: 96.056, Train@5 Acc: 99.607, old acc:nan
+
+ 2021-09-24 09:37:01,578 | INFO | root 	 Task 2/5, Epoch 106/170 => Clf loss: 0.091 Aux loss: 0.104, Train Accu: 96.737, Train@5 Acc: 99.738, old acc:nan
+
+ 2021-09-24 09:37:11,216 | INFO | root 	 Task 2/5, Epoch 107/170 => Clf loss: 0.101 Aux loss: 0.115, Train Accu: 96.309, Train@5 Acc: 99.738, old acc:nan
+
+ 2021-09-24 09:37:20,938 | INFO | root 	 Task 2/5, Epoch 108/170 => Clf loss: 0.11 Aux loss: 0.124, Train Accu: 96.047, Train@5 Acc: 99.546, old acc:nan
+
+ 2021-09-24 09:37:30,648 | INFO | root 	 Task 2/5, Epoch 109/170 => Clf loss: 0.094 Aux loss: 0.105, Train Accu: 96.65, Train@5 Acc: 99.695, old acc:nan
+
+ 2021-09-24 09:37:40,264 | INFO | root 	 Task 2/5, Epoch 110/170 => Clf loss: 0.108 Aux loss: 0.122, Train Accu: 96.17, Train@5 Acc: 99.625, old acc:nan
+
+ 2021-09-24 09:37:49,958 | INFO | root 	 Task 2/5, Epoch 111/170 => Clf loss: 0.046 Aux loss: 0.052, Train Accu: 98.499, Train@5 Acc: 99.974, old acc:nan
+
+ 2021-09-24 09:37:59,421 | INFO | root 	 Task 2/5, Epoch 112/170 => Clf loss: 0.031 Aux loss: 0.034, Train Accu: 99.119, Train@5 Acc: 99.956, old acc:nan
+
+ 2021-09-24 09:38:09,114 | INFO | root 	 Task 2/5, Epoch 113/170 => Clf loss: 0.021 Aux loss: 0.023, Train Accu: 99.398, Train@5 Acc: 99.991, old acc:nan
+
+ 2021-09-24 09:38:18,798 | INFO | root 	 Task 2/5, Epoch 114/170 => Clf loss: 0.017 Aux loss: 0.018, Train Accu: 99.529, Train@5 Acc: 99.983, old acc:nan
+
+ 2021-09-24 09:38:28,458 | INFO | root 	 Task 2/5, Epoch 115/170 => Clf loss: 0.016 Aux loss: 0.017, Train Accu: 99.494, Train@5 Acc: 99.974, old acc:nan
+
+ 2021-09-24 09:38:38,478 | INFO | root 	 Task 2/5, Epoch 116/170 => Clf loss: 0.012 Aux loss: 0.013, Train Accu: 99.642, Train@5 Acc: 99.991, old acc:nan
+
+ 2021-09-24 09:38:48,303 | INFO | root 	 Task 2/5, Epoch 117/170 => Clf loss: 0.012 Aux loss: 0.013, Train Accu: 99.677, Train@5 Acc: 99.965, old acc:nan
+
+ 2021-09-24 09:38:57,989 | INFO | root 	 Task 2/5, Epoch 118/170 => Clf loss: 0.008 Aux loss: 0.009, Train Accu: 99.825, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:39:08,052 | INFO | root 	 Task 2/5, Epoch 119/170 => Clf loss: 0.008 Aux loss: 0.009, Train Accu: 99.817, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:39:17,733 | INFO | root 	 Task 2/5, Epoch 120/170 => Clf loss: 0.008 Aux loss: 0.009, Train Accu: 99.817, Train@5 Acc: 99.991, old acc:nan
+
+ 2021-09-24 09:39:27,491 | INFO | root 	 Task 2/5, Epoch 121/170 => Clf loss: 0.007 Aux loss: 0.008, Train Accu: 99.834, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:39:37,123 | INFO | root 	 Task 2/5, Epoch 122/170 => Clf loss: 0.006 Aux loss: 0.007, Train Accu: 99.843, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:39:46,634 | INFO | root 	 Task 2/5, Epoch 123/170 => Clf loss: 0.006 Aux loss: 0.006, Train Accu: 99.913, Train@5 Acc: 99.991, old acc:nan
+
+ 2021-09-24 09:39:56,081 | INFO | root 	 Task 2/5, Epoch 124/170 => Clf loss: 0.006 Aux loss: 0.006, Train Accu: 99.869, Train@5 Acc: 99.991, old acc:nan
+
+ 2021-09-24 09:40:05,646 | INFO | root 	 Task 2/5, Epoch 125/170 => Clf loss: 0.005 Aux loss: 0.005, Train Accu: 99.904, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:40:15,165 | INFO | root 	 Task 2/5, Epoch 126/170 => Clf loss: 0.005 Aux loss: 0.005, Train Accu: 99.921, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:40:24,777 | INFO | root 	 Task 2/5, Epoch 127/170 => Clf loss: 0.005 Aux loss: 0.005, Train Accu: 99.869, Train@5 Acc: 99.991, old acc:nan
+
+ 2021-09-24 09:40:34,336 | INFO | root 	 Task 2/5, Epoch 128/170 => Clf loss: 0.004 Aux loss: 0.005, Train Accu: 99.921, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:40:43,924 | INFO | root 	 Task 2/5, Epoch 129/170 => Clf loss: 0.005 Aux loss: 0.005, Train Accu: 99.921, Train@5 Acc: 99.991, old acc:nan
+
+ 2021-09-24 09:40:53,706 | INFO | root 	 Task 2/5, Epoch 130/170 => Clf loss: 0.004 Aux loss: 0.004, Train Accu: 99.93, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:41:03,310 | INFO | root 	 Task 2/5, Epoch 131/170 => Clf loss: 0.005 Aux loss: 0.005, Train Accu: 99.921, Train@5 Acc: 99.991, old acc:nan
+
+ 2021-09-24 09:41:12,998 | INFO | root 	 Task 2/5, Epoch 132/170 => Clf loss: 0.004 Aux loss: 0.004, Train Accu: 99.93, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:41:22,647 | INFO | root 	 Task 2/5, Epoch 133/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 99.983, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:41:32,206 | INFO | root 	 Task 2/5, Epoch 134/170 => Clf loss: 0.004 Aux loss: 0.004, Train Accu: 99.939, Train@5 Acc: 99.991, old acc:nan
+
+ 2021-09-24 09:41:41,523 | INFO | root 	 Task 2/5, Epoch 135/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 99.956, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:41:51,047 | INFO | root 	 Task 2/5, Epoch 136/170 => Clf loss: 0.004 Aux loss: 0.004, Train Accu: 99.948, Train@5 Acc: 99.991, old acc:nan
+
+ 2021-09-24 09:42:00,768 | INFO | root 	 Task 2/5, Epoch 137/170 => Clf loss: 0.004 Aux loss: 0.004, Train Accu: 99.939, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:42:10,039 | INFO | root 	 Task 2/5, Epoch 138/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 99.939, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:42:19,873 | INFO | root 	 Task 2/5, Epoch 139/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 99.939, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:42:29,611 | INFO | root 	 Task 2/5, Epoch 140/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 99.965, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:42:39,573 | INFO | root 	 Task 2/5, Epoch 141/170 => Clf loss: 0.004 Aux loss: 0.004, Train Accu: 99.939, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:42:49,220 | INFO | root 	 Task 2/5, Epoch 142/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 99.974, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:42:58,548 | INFO | root 	 Task 2/5, Epoch 143/170 => Clf loss: 0.004 Aux loss: 0.004, Train Accu: 99.939, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:43:07,826 | INFO | root 	 Task 2/5, Epoch 144/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 99.965, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:43:17,360 | INFO | root 	 Task 2/5, Epoch 145/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 99.991, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:43:27,060 | INFO | root 	 Task 2/5, Epoch 146/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 99.983, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:43:36,827 | INFO | root 	 Task 2/5, Epoch 147/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 99.956, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:43:46,120 | INFO | root 	 Task 2/5, Epoch 148/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 99.956, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:43:55,472 | INFO | root 	 Task 2/5, Epoch 149/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 99.974, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:44:05,169 | INFO | root 	 Task 2/5, Epoch 150/170 => Clf loss: 0.002 Aux loss: 0.002, Train Accu: 99.974, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:44:14,796 | INFO | root 	 Task 2/5, Epoch 151/170 => Clf loss: 0.002 Aux loss: 0.002, Train Accu: 99.965, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:44:24,398 | INFO | root 	 Task 2/5, Epoch 152/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 99.939, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:44:34,122 | INFO | root 	 Task 2/5, Epoch 153/170 => Clf loss: 0.004 Aux loss: 0.004, Train Accu: 99.913, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:44:43,708 | INFO | root 	 Task 2/5, Epoch 154/170 => Clf loss: 0.004 Aux loss: 0.004, Train Accu: 99.921, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:44:53,635 | INFO | root 	 Task 2/5, Epoch 155/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 99.93, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:45:03,591 | INFO | root 	 Task 2/5, Epoch 156/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 99.948, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:45:13,297 | INFO | root 	 Task 2/5, Epoch 157/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 99.948, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:45:23,071 | INFO | root 	 Task 2/5, Epoch 158/170 => Clf loss: 0.002 Aux loss: 0.002, Train Accu: 99.991, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:45:32,804 | INFO | root 	 Task 2/5, Epoch 159/170 => Clf loss: 0.003 Aux loss: 0.002, Train Accu: 99.983, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:45:42,645 | INFO | root 	 Task 2/5, Epoch 160/170 => Clf loss: 0.002 Aux loss: 0.002, Train Accu: 99.983, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:45:52,397 | INFO | root 	 Task 2/5, Epoch 161/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 99.939, Train@5 Acc: 99.983, old acc:nan
+
+ 2021-09-24 09:46:01,783 | INFO | root 	 Task 2/5, Epoch 162/170 => Clf loss: 0.002 Aux loss: 0.002, Train Accu: 99.956, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:46:11,397 | INFO | root 	 Task 2/5, Epoch 163/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 99.939, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:46:21,098 | INFO | root 	 Task 2/5, Epoch 164/170 => Clf loss: 0.002 Aux loss: 0.002, Train Accu: 99.983, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:46:30,832 | INFO | root 	 Task 2/5, Epoch 165/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 99.974, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:46:40,565 | INFO | root 	 Task 2/5, Epoch 166/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 99.974, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:46:50,205 | INFO | root 	 Task 2/5, Epoch 167/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 99.974, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:46:59,604 | INFO | root 	 Task 2/5, Epoch 168/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 99.965, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:47:09,323 | INFO | root 	 Task 2/5, Epoch 169/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 99.965, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:47:19,056 | INFO | root 	 Task 2/5, Epoch 170/170 => Clf loss: 0.002 Aux loss: 0.002, Train Accu: 99.983, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:47:19,057 | INFO | root 	 After training: Weight norm per class [2.486, 2.648]
+
+ 2021-09-24 09:47:31,321 | INFO | root 	 Trainset: Feature norm per class [5.658, 5.11]
+
+ 2021-09-24 09:47:31,352 | INFO | root 	 save model
+
+ 2021-09-24 09:47:31,624 | INFO | root 	 Begin finetuning last layer
+
+ 2021-09-24 09:47:34,546 | INFO | root 	 Epoch 0 finetuning loss 1.124 acc 0.885
+
+ 2021-09-24 09:47:37,527 | INFO | root 	 Epoch 1 finetuning loss 0.531 acc 1.000
+
+ 2021-09-24 09:47:40,345 | INFO | root 	 Epoch 2 finetuning loss 0.291 acc 0.999
+
+ 2021-09-24 09:47:43,410 | INFO | root 	 Epoch 3 finetuning loss 0.205 acc 1.000
+
+ 2021-09-24 09:47:46,271 | INFO | root 	 Epoch 4 finetuning loss 0.162 acc 1.000
+
+ 2021-09-24 09:47:49,250 | INFO | root 	 Epoch 5 finetuning loss 0.133 acc 1.000
+
+ 2021-09-24 09:47:52,281 | INFO | root 	 Epoch 6 finetuning loss 0.116 acc 1.000
+
+ 2021-09-24 09:47:55,292 | INFO | root 	 Epoch 7 finetuning loss 0.103 acc 1.000
+
+ 2021-09-24 09:47:58,407 | INFO | root 	 Epoch 8 finetuning loss 0.093 acc 1.000
+
+ 2021-09-24 09:48:01,398 | INFO | root 	 Epoch 9 finetuning loss 0.086 acc 1.000
+
+ 2021-09-24 09:48:04,444 | INFO | root 	 Epoch 10 finetuning loss 0.080 acc 1.000
+
+ 2021-09-24 09:48:07,335 | INFO | root 	 Epoch 11 finetuning loss 0.074 acc 0.999
+
+ 2021-09-24 09:48:10,258 | INFO | root 	 Epoch 12 finetuning loss 0.069 acc 1.000
+
+ 2021-09-24 09:48:13,179 | INFO | root 	 Epoch 13 finetuning loss 0.066 acc 1.000
+
+ 2021-09-24 09:48:16,042 | INFO | root 	 Epoch 14 finetuning loss 0.062 acc 1.000
+
+ 2021-09-24 09:48:19,061 | INFO | root 	 Epoch 15 finetuning loss 0.061 acc 1.000
+
+ 2021-09-24 09:48:22,011 | INFO | root 	 Epoch 16 finetuning loss 0.060 acc 0.999
+
+ 2021-09-24 09:48:25,094 | INFO | root 	 Epoch 17 finetuning loss 0.060 acc 1.000
+
+ 2021-09-24 09:48:28,032 | INFO | root 	 Epoch 18 finetuning loss 0.059 acc 1.000
+
+ 2021-09-24 09:48:31,064 | INFO | root 	 Epoch 19 finetuning loss 0.059 acc 1.000
+
+ 2021-09-24 09:48:34,086 | INFO | root 	 Epoch 20 finetuning loss 0.059 acc 0.999
+
+ 2021-09-24 09:48:37,151 | INFO | root 	 Epoch 21 finetuning loss 0.060 acc 0.999
+
+ 2021-09-24 09:48:40,220 | INFO | root 	 Epoch 22 finetuning loss 0.058 acc 1.000
+
+ 2021-09-24 09:48:43,066 | INFO | root 	 Epoch 23 finetuning loss 0.057 acc 1.000
+
+ 2021-09-24 09:48:46,034 | INFO | root 	 Epoch 24 finetuning loss 0.058 acc 1.000
+
+ 2021-09-24 09:48:48,932 | INFO | root 	 Epoch 25 finetuning loss 0.058 acc 0.999
+
+ 2021-09-24 09:48:51,940 | INFO | root 	 Epoch 26 finetuning loss 0.058 acc 1.000
+
+ 2021-09-24 09:48:54,773 | INFO | root 	 Epoch 27 finetuning loss 0.058 acc 0.999
+
+ 2021-09-24 09:48:57,639 | INFO | root 	 Epoch 28 finetuning loss 0.057 acc 1.000
+
+ 2021-09-24 09:49:00,623 | INFO | root 	 Epoch 29 finetuning loss 0.057 acc 1.000
+
+ 2021-09-24 09:49:03,493 | INFO | root 	 Epoch 30 finetuning loss 0.057 acc 1.000
+
+ 2021-09-24 09:49:06,467 | INFO | root 	 Epoch 31 finetuning loss 0.056 acc 1.000
+
+ 2021-09-24 09:49:09,355 | INFO | root 	 Epoch 32 finetuning loss 0.057 acc 1.000
+
+ 2021-09-24 09:49:12,350 | INFO | root 	 Epoch 33 finetuning loss 0.055 acc 1.000
+
+ 2021-09-24 09:49:15,212 | INFO | root 	 Epoch 34 finetuning loss 0.056 acc 0.999
+
+ 2021-09-24 09:49:18,376 | INFO | root 	 Epoch 35 finetuning loss 0.057 acc 0.999
+
+ 2021-09-24 09:49:21,279 | INFO | root 	 Epoch 36 finetuning loss 0.057 acc 1.000
+
+ 2021-09-24 09:49:24,160 | INFO | root 	 Epoch 37 finetuning loss 0.058 acc 0.999
+
+ 2021-09-24 09:49:27,270 | INFO | root 	 Epoch 38 finetuning loss 0.056 acc 1.000
+
+ 2021-09-24 09:49:30,278 | INFO | root 	 Epoch 39 finetuning loss 0.057 acc 1.000
+
+ 2021-09-24 09:49:33,232 | INFO | root 	 Epoch 40 finetuning loss 0.056 acc 1.000
+
+ 2021-09-24 09:49:36,055 | INFO | root 	 Epoch 41 finetuning loss 0.057 acc 1.000
+
+ 2021-09-24 09:49:39,085 | INFO | root 	 Epoch 42 finetuning loss 0.057 acc 1.000
+
+ 2021-09-24 09:49:41,934 | INFO | root 	 Epoch 43 finetuning loss 0.056 acc 1.000
+
+ 2021-09-24 09:49:44,817 | INFO | root 	 Epoch 44 finetuning loss 0.056 acc 1.000
+
+ 2021-09-24 09:49:47,820 | INFO | root 	 Epoch 45 finetuning loss 0.058 acc 1.000
+
+ 2021-09-24 09:49:50,813 | INFO | root 	 Epoch 46 finetuning loss 0.056 acc 1.000
+
+ 2021-09-24 09:49:53,846 | INFO | root 	 Epoch 47 finetuning loss 0.057 acc 1.000
+
+ 2021-09-24 09:49:56,806 | INFO | root 	 Epoch 48 finetuning loss 0.056 acc 1.000
+
+ 2021-09-24 09:49:59,908 | INFO | root 	 Epoch 49 finetuning loss 0.057 acc 0.999
+
+ 2021-09-24 09:50:00,244 | INFO | root 	 build memory
+
+ 2021-09-24 09:50:00,244 | INFO | root 	 Building & updating memory.(iCaRL)
+
+ 2021-09-24 09:50:05,647 | INFO | root 	 Save step1 memory!
+
+ 2021-09-24 09:50:05,796 | INFO | root 	 Eval on 0->4.
+
+ 2021-09-24 09:50:08,518 | INFO | root 	 top1:{'total': 92.3, '00-01': 89.35, '02-03': 95.25}
+
+ 2021-09-24 09:50:08,519 | INFO | root 	 top5:{'total': 100.0, '00-01': 98.3, '02-03': 98.6}
+
+ 2021-09-24 09:50:09,323 | INFO | root 	 Begin step 2
+
+ 2021-09-24 09:50:09,324 | INFO | root 	 Now [333, 333, 333, 333, 333, 333] examplars per class.
+
+ 2021-09-24 09:50:09,633 | INFO | root 	 Step 2 weight decay 0.00050
+
+ 2021-09-24 09:50:09,638 | INFO | root 	 Train on 4->6.
+
+ 2021-09-24 09:50:09,640 | INFO | root 	 nb 12000
+
+ 2021-09-24 09:50:09,642 | INFO | root 	 Initial trainset: Weight norm per class [1.002, 0.998, 0.995]
+
+ 2021-09-24 09:50:28,822 | INFO | root 	 Initial trainset: Feature norm per class [7.448, 6.942, 6.162]
+
+ 2021-09-24 09:50:41,927 | INFO | root 	 Task 3/5, Epoch 1/170 => Clf loss: 0.57 Aux loss: 0.498, Train Accu: 82.392, Train@5 Acc: 99.375, old acc:nan
+
+ 2021-09-24 09:50:55,121 | INFO | root 	 Task 3/5, Epoch 2/170 => Clf loss: 0.274 Aux loss: 0.286, Train Accu: 90.267, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:51:08,380 | INFO | root 	 Task 3/5, Epoch 3/170 => Clf loss: 0.209 Aux loss: 0.232, Train Accu: 92.458, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:51:21,631 | INFO | root 	 Task 3/5, Epoch 4/170 => Clf loss: 0.191 Aux loss: 0.225, Train Accu: 93.275, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:51:35,036 | INFO | root 	 Task 3/5, Epoch 5/170 => Clf loss: 0.166 Aux loss: 0.203, Train Accu: 94.05, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:51:48,328 | INFO | root 	 Task 3/5, Epoch 6/170 => Clf loss: 0.161 Aux loss: 0.202, Train Accu: 94.192, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:52:00,728 | INFO | root 	 Task 3/5, Epoch 7/170 => Clf loss: 0.158 Aux loss: 0.208, Train Accu: 94.217, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:52:13,902 | INFO | root 	 Task 3/5, Epoch 8/170 => Clf loss: 0.174 Aux loss: 0.232, Train Accu: 93.617, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:52:26,827 | INFO | root 	 Task 3/5, Epoch 9/170 => Clf loss: 0.16 Aux loss: 0.213, Train Accu: 94.158, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:52:40,207 | INFO | root 	 Task 3/5, Epoch 10/170 => Clf loss: 0.162 Aux loss: 0.225, Train Accu: 94.133, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:52:53,427 | INFO | root 	 Task 3/5, Epoch 11/170 => Clf loss: 0.265 Aux loss: 0.282, Train Accu: 91.308, Train@5 Acc: 99.55, old acc:nan
+
+ 2021-09-24 09:53:06,696 | INFO | root 	 Task 3/5, Epoch 12/170 => Clf loss: 0.151 Aux loss: 0.203, Train Accu: 94.625, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:53:19,852 | INFO | root 	 Task 3/5, Epoch 13/170 => Clf loss: 0.136 Aux loss: 0.192, Train Accu: 95.033, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:53:32,848 | INFO | root 	 Task 3/5, Epoch 14/170 => Clf loss: 0.14 Aux loss: 0.201, Train Accu: 94.808, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:53:46,156 | INFO | root 	 Task 3/5, Epoch 15/170 => Clf loss: 0.125 Aux loss: 0.18, Train Accu: 95.358, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:53:59,170 | INFO | root 	 Task 3/5, Epoch 16/170 => Clf loss: 0.123 Aux loss: 0.176, Train Accu: 95.492, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:54:12,659 | INFO | root 	 Task 3/5, Epoch 17/170 => Clf loss: 0.122 Aux loss: 0.181, Train Accu: 95.55, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:54:25,565 | INFO | root 	 Task 3/5, Epoch 18/170 => Clf loss: 0.124 Aux loss: 0.181, Train Accu: 95.6, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:54:38,922 | INFO | root 	 Task 3/5, Epoch 19/170 => Clf loss: 0.123 Aux loss: 0.175, Train Accu: 95.483, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:54:51,636 | INFO | root 	 Task 3/5, Epoch 20/170 => Clf loss: 0.112 Aux loss: 0.162, Train Accu: 95.817, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:55:05,134 | INFO | root 	 Task 3/5, Epoch 21/170 => Clf loss: 0.113 Aux loss: 0.172, Train Accu: 95.858, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:55:18,644 | INFO | root 	 Task 3/5, Epoch 22/170 => Clf loss: 0.112 Aux loss: 0.167, Train Accu: 96.083, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:55:32,255 | INFO | root 	 Task 3/5, Epoch 23/170 => Clf loss: 0.104 Aux loss: 0.157, Train Accu: 96.183, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:55:45,719 | INFO | root 	 Task 3/5, Epoch 24/170 => Clf loss: 0.115 Aux loss: 0.169, Train Accu: 95.95, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:55:59,007 | INFO | root 	 Task 3/5, Epoch 25/170 => Clf loss: 0.111 Aux loss: 0.168, Train Accu: 96.108, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:56:12,626 | INFO | root 	 Task 3/5, Epoch 26/170 => Clf loss: 0.098 Aux loss: 0.149, Train Accu: 96.275, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:56:26,290 | INFO | root 	 Task 3/5, Epoch 27/170 => Clf loss: 0.098 Aux loss: 0.155, Train Accu: 96.483, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:56:39,865 | INFO | root 	 Task 3/5, Epoch 28/170 => Clf loss: 0.102 Aux loss: 0.152, Train Accu: 96.308, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:56:53,903 | INFO | root 	 Task 3/5, Epoch 29/170 => Clf loss: 0.109 Aux loss: 0.157, Train Accu: 96.083, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:57:08,324 | INFO | root 	 Task 3/5, Epoch 30/170 => Clf loss: 0.092 Aux loss: 0.138, Train Accu: 96.6, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:57:22,649 | INFO | root 	 Task 3/5, Epoch 31/170 => Clf loss: 0.096 Aux loss: 0.146, Train Accu: 96.467, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:57:37,043 | INFO | root 	 Task 3/5, Epoch 32/170 => Clf loss: 0.093 Aux loss: 0.142, Train Accu: 96.833, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:57:58,414 | INFO | root 	 Task 3/5, Epoch 33/170 => Clf loss: 0.099 Aux loss: 0.15, Train Accu: 96.392, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:58:12,379 | INFO | root 	 Task 3/5, Epoch 34/170 => Clf loss: 0.098 Aux loss: 0.15, Train Accu: 96.608, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:58:26,662 | INFO | root 	 Task 3/5, Epoch 35/170 => Clf loss: 0.097 Aux loss: 0.145, Train Accu: 96.425, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:58:54,588 | INFO | root 	 Task 3/5, Epoch 36/170 => Clf loss: 0.09 Aux loss: 0.14, Train Accu: 96.733, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:59:13,279 | INFO | root 	 Task 3/5, Epoch 37/170 => Clf loss: 0.091 Aux loss: 0.142, Train Accu: 96.658, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:59:26,548 | INFO | root 	 Task 3/5, Epoch 38/170 => Clf loss: 0.085 Aux loss: 0.133, Train Accu: 97.017, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:59:39,809 | INFO | root 	 Task 3/5, Epoch 39/170 => Clf loss: 0.1 Aux loss: 0.149, Train Accu: 96.417, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 09:59:53,171 | INFO | root 	 Task 3/5, Epoch 40/170 => Clf loss: 0.095 Aux loss: 0.148, Train Accu: 96.642, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:00:05,899 | INFO | root 	 Task 3/5, Epoch 41/170 => Clf loss: 0.087 Aux loss: 0.133, Train Accu: 96.858, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:00:19,391 | INFO | root 	 Task 3/5, Epoch 42/170 => Clf loss: 0.083 Aux loss: 0.129, Train Accu: 97.008, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:00:33,153 | INFO | root 	 Task 3/5, Epoch 43/170 => Clf loss: 0.089 Aux loss: 0.139, Train Accu: 96.95, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:00:47,010 | INFO | root 	 Task 3/5, Epoch 44/170 => Clf loss: 0.085 Aux loss: 0.131, Train Accu: 97.058, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:01:01,363 | INFO | root 	 Task 3/5, Epoch 45/170 => Clf loss: 0.088 Aux loss: 0.135, Train Accu: 96.775, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:01:15,411 | INFO | root 	 Task 3/5, Epoch 46/170 => Clf loss: 0.086 Aux loss: 0.133, Train Accu: 96.925, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:01:30,297 | INFO | root 	 Task 3/5, Epoch 47/170 => Clf loss: 0.082 Aux loss: 0.129, Train Accu: 96.942, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:01:44,834 | INFO | root 	 Task 3/5, Epoch 48/170 => Clf loss: 0.089 Aux loss: 0.139, Train Accu: 96.983, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:01:58,733 | INFO | root 	 Task 3/5, Epoch 49/170 => Clf loss: 0.076 Aux loss: 0.123, Train Accu: 97.267, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:02:12,459 | INFO | root 	 Task 3/5, Epoch 50/170 => Clf loss: 0.09 Aux loss: 0.135, Train Accu: 96.808, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:02:27,431 | INFO | root 	 Task 3/5, Epoch 51/170 => Clf loss: 0.09 Aux loss: 0.135, Train Accu: 96.825, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:02:41,585 | INFO | root 	 Task 3/5, Epoch 52/170 => Clf loss: 0.081 Aux loss: 0.122, Train Accu: 96.975, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:02:58,302 | INFO | root 	 Task 3/5, Epoch 53/170 => Clf loss: 0.078 Aux loss: 0.124, Train Accu: 97.242, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:03:12,549 | INFO | root 	 Task 3/5, Epoch 54/170 => Clf loss: 0.087 Aux loss: 0.136, Train Accu: 96.917, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:03:26,329 | INFO | root 	 Task 3/5, Epoch 55/170 => Clf loss: 0.075 Aux loss: 0.123, Train Accu: 97.217, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:03:40,443 | INFO | root 	 Task 3/5, Epoch 56/170 => Clf loss: 0.084 Aux loss: 0.132, Train Accu: 96.95, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:03:54,445 | INFO | root 	 Task 3/5, Epoch 57/170 => Clf loss: 0.092 Aux loss: 0.141, Train Accu: 96.558, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:04:08,217 | INFO | root 	 Task 3/5, Epoch 58/170 => Clf loss: 0.085 Aux loss: 0.133, Train Accu: 96.85, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:04:22,229 | INFO | root 	 Task 3/5, Epoch 59/170 => Clf loss: 0.083 Aux loss: 0.129, Train Accu: 96.925, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:04:36,064 | INFO | root 	 Task 3/5, Epoch 60/170 => Clf loss: 0.081 Aux loss: 0.123, Train Accu: 97.0, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:04:49,919 | INFO | root 	 Task 3/5, Epoch 61/170 => Clf loss: 0.086 Aux loss: 0.135, Train Accu: 96.825, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:05:03,622 | INFO | root 	 Task 3/5, Epoch 62/170 => Clf loss: 0.083 Aux loss: 0.127, Train Accu: 97.092, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:05:17,606 | INFO | root 	 Task 3/5, Epoch 63/170 => Clf loss: 0.08 Aux loss: 0.132, Train Accu: 97.067, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:05:32,269 | INFO | root 	 Task 3/5, Epoch 64/170 => Clf loss: 0.083 Aux loss: 0.13, Train Accu: 96.908, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:05:46,580 | INFO | root 	 Task 3/5, Epoch 65/170 => Clf loss: 0.086 Aux loss: 0.131, Train Accu: 96.875, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:06:00,598 | INFO | root 	 Task 3/5, Epoch 66/170 => Clf loss: 0.076 Aux loss: 0.122, Train Accu: 97.075, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:06:14,675 | INFO | root 	 Task 3/5, Epoch 67/170 => Clf loss: 0.09 Aux loss: 0.133, Train Accu: 96.758, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:06:28,466 | INFO | root 	 Task 3/5, Epoch 68/170 => Clf loss: 0.08 Aux loss: 0.126, Train Accu: 97.15, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:06:42,665 | INFO | root 	 Task 3/5, Epoch 69/170 => Clf loss: 0.076 Aux loss: 0.117, Train Accu: 97.192, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:06:56,574 | INFO | root 	 Task 3/5, Epoch 70/170 => Clf loss: 0.081 Aux loss: 0.123, Train Accu: 97.075, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:07:10,397 | INFO | root 	 Task 3/5, Epoch 71/170 => Clf loss: 0.076 Aux loss: 0.119, Train Accu: 97.292, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:07:24,411 | INFO | root 	 Task 3/5, Epoch 72/170 => Clf loss: 0.076 Aux loss: 0.119, Train Accu: 97.25, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:07:38,504 | INFO | root 	 Task 3/5, Epoch 73/170 => Clf loss: 0.075 Aux loss: 0.123, Train Accu: 97.108, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:07:53,153 | INFO | root 	 Task 3/5, Epoch 74/170 => Clf loss: 0.073 Aux loss: 0.119, Train Accu: 97.508, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:08:07,340 | INFO | root 	 Task 3/5, Epoch 75/170 => Clf loss: 0.083 Aux loss: 0.127, Train Accu: 97.042, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:08:21,290 | INFO | root 	 Task 3/5, Epoch 76/170 => Clf loss: 0.075 Aux loss: 0.124, Train Accu: 97.417, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:08:35,059 | INFO | root 	 Task 3/5, Epoch 77/170 => Clf loss: 0.076 Aux loss: 0.119, Train Accu: 97.375, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:08:48,965 | INFO | root 	 Task 3/5, Epoch 78/170 => Clf loss: 0.083 Aux loss: 0.127, Train Accu: 97.092, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:09:02,091 | INFO | root 	 Task 3/5, Epoch 79/170 => Clf loss: 0.077 Aux loss: 0.117, Train Accu: 97.167, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:09:15,253 | INFO | root 	 Task 3/5, Epoch 80/170 => Clf loss: 0.078 Aux loss: 0.123, Train Accu: 97.225, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:09:28,454 | INFO | root 	 Task 3/5, Epoch 81/170 => Clf loss: 0.081 Aux loss: 0.125, Train Accu: 97.117, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:09:41,807 | INFO | root 	 Task 3/5, Epoch 82/170 => Clf loss: 0.069 Aux loss: 0.116, Train Accu: 97.442, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:09:55,044 | INFO | root 	 Task 3/5, Epoch 83/170 => Clf loss: 0.078 Aux loss: 0.124, Train Accu: 97.192, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:10:08,958 | INFO | root 	 Task 3/5, Epoch 84/170 => Clf loss: 0.075 Aux loss: 0.117, Train Accu: 97.308, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:10:22,943 | INFO | root 	 Task 3/5, Epoch 85/170 => Clf loss: 0.072 Aux loss: 0.117, Train Accu: 97.533, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:10:37,012 | INFO | root 	 Task 3/5, Epoch 86/170 => Clf loss: 0.078 Aux loss: 0.122, Train Accu: 97.142, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:10:51,073 | INFO | root 	 Task 3/5, Epoch 87/170 => Clf loss: 0.076 Aux loss: 0.124, Train Accu: 97.258, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:11:05,010 | INFO | root 	 Task 3/5, Epoch 88/170 => Clf loss: 0.072 Aux loss: 0.116, Train Accu: 97.483, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:11:18,956 | INFO | root 	 Task 3/5, Epoch 89/170 => Clf loss: 0.068 Aux loss: 0.111, Train Accu: 97.65, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:11:33,144 | INFO | root 	 Task 3/5, Epoch 90/170 => Clf loss: 0.076 Aux loss: 0.121, Train Accu: 97.25, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:11:46,704 | INFO | root 	 Task 3/5, Epoch 91/170 => Clf loss: 0.075 Aux loss: 0.119, Train Accu: 97.175, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:12:00,584 | INFO | root 	 Task 3/5, Epoch 92/170 => Clf loss: 0.072 Aux loss: 0.112, Train Accu: 97.308, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:12:14,310 | INFO | root 	 Task 3/5, Epoch 93/170 => Clf loss: 0.073 Aux loss: 0.119, Train Accu: 97.358, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:12:28,150 | INFO | root 	 Task 3/5, Epoch 94/170 => Clf loss: 0.079 Aux loss: 0.126, Train Accu: 97.25, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:12:42,104 | INFO | root 	 Task 3/5, Epoch 95/170 => Clf loss: 0.074 Aux loss: 0.115, Train Accu: 97.358, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:12:56,286 | INFO | root 	 Task 3/5, Epoch 96/170 => Clf loss: 0.074 Aux loss: 0.118, Train Accu: 97.425, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:13:10,499 | INFO | root 	 Task 3/5, Epoch 97/170 => Clf loss: 0.075 Aux loss: 0.117, Train Accu: 97.308, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:13:24,558 | INFO | root 	 Task 3/5, Epoch 98/170 => Clf loss: 0.065 Aux loss: 0.104, Train Accu: 97.625, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:13:38,268 | INFO | root 	 Task 3/5, Epoch 99/170 => Clf loss: 0.079 Aux loss: 0.124, Train Accu: 97.133, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:13:52,449 | INFO | root 	 Task 3/5, Epoch 100/170 => Clf loss: 0.076 Aux loss: 0.122, Train Accu: 97.317, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:14:06,421 | INFO | root 	 Task 3/5, Epoch 101/170 => Clf loss: 0.068 Aux loss: 0.106, Train Accu: 97.683, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:14:20,489 | INFO | root 	 Task 3/5, Epoch 102/170 => Clf loss: 0.081 Aux loss: 0.129, Train Accu: 97.083, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:14:34,334 | INFO | root 	 Task 3/5, Epoch 103/170 => Clf loss: 0.068 Aux loss: 0.107, Train Accu: 97.692, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:14:48,427 | INFO | root 	 Task 3/5, Epoch 104/170 => Clf loss: 0.078 Aux loss: 0.12, Train Accu: 97.008, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:15:02,499 | INFO | root 	 Task 3/5, Epoch 105/170 => Clf loss: 0.076 Aux loss: 0.119, Train Accu: 97.308, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:15:16,540 | INFO | root 	 Task 3/5, Epoch 106/170 => Clf loss: 0.075 Aux loss: 0.119, Train Accu: 97.333, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:15:30,815 | INFO | root 	 Task 3/5, Epoch 107/170 => Clf loss: 0.077 Aux loss: 0.117, Train Accu: 97.25, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:15:44,941 | INFO | root 	 Task 3/5, Epoch 108/170 => Clf loss: 0.066 Aux loss: 0.106, Train Accu: 97.675, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:15:59,065 | INFO | root 	 Task 3/5, Epoch 109/170 => Clf loss: 0.072 Aux loss: 0.119, Train Accu: 97.525, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:16:13,091 | INFO | root 	 Task 3/5, Epoch 110/170 => Clf loss: 0.067 Aux loss: 0.109, Train Accu: 97.667, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:16:27,114 | INFO | root 	 Task 3/5, Epoch 111/170 => Clf loss: 0.035 Aux loss: 0.059, Train Accu: 98.867, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:16:41,298 | INFO | root 	 Task 3/5, Epoch 112/170 => Clf loss: 0.02 Aux loss: 0.03, Train Accu: 99.5, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:16:55,438 | INFO | root 	 Task 3/5, Epoch 113/170 => Clf loss: 0.016 Aux loss: 0.025, Train Accu: 99.567, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:17:09,414 | INFO | root 	 Task 3/5, Epoch 114/170 => Clf loss: 0.013 Aux loss: 0.021, Train Accu: 99.675, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:17:23,753 | INFO | root 	 Task 3/5, Epoch 115/170 => Clf loss: 0.01 Aux loss: 0.014, Train Accu: 99.825, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:17:37,833 | INFO | root 	 Task 3/5, Epoch 116/170 => Clf loss: 0.01 Aux loss: 0.014, Train Accu: 99.775, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:17:51,907 | INFO | root 	 Task 3/5, Epoch 117/170 => Clf loss: 0.008 Aux loss: 0.012, Train Accu: 99.825, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:18:05,813 | INFO | root 	 Task 3/5, Epoch 118/170 => Clf loss: 0.007 Aux loss: 0.011, Train Accu: 99.875, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:18:19,855 | INFO | root 	 Task 3/5, Epoch 119/170 => Clf loss: 0.007 Aux loss: 0.011, Train Accu: 99.908, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:18:33,775 | INFO | root 	 Task 3/5, Epoch 120/170 => Clf loss: 0.007 Aux loss: 0.009, Train Accu: 99.875, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:18:47,777 | INFO | root 	 Task 3/5, Epoch 121/170 => Clf loss: 0.005 Aux loss: 0.007, Train Accu: 99.95, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:19:01,847 | INFO | root 	 Task 3/5, Epoch 122/170 => Clf loss: 0.006 Aux loss: 0.007, Train Accu: 99.9, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:19:15,844 | INFO | root 	 Task 3/5, Epoch 123/170 => Clf loss: 0.005 Aux loss: 0.006, Train Accu: 99.933, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:19:29,727 | INFO | root 	 Task 3/5, Epoch 124/170 => Clf loss: 0.004 Aux loss: 0.005, Train Accu: 99.933, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:19:43,586 | INFO | root 	 Task 3/5, Epoch 125/170 => Clf loss: 0.004 Aux loss: 0.005, Train Accu: 99.967, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:19:57,413 | INFO | root 	 Task 3/5, Epoch 126/170 => Clf loss: 0.004 Aux loss: 0.005, Train Accu: 99.975, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:20:11,812 | INFO | root 	 Task 3/5, Epoch 127/170 => Clf loss: 0.004 Aux loss: 0.005, Train Accu: 99.942, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:20:25,935 | INFO | root 	 Task 3/5, Epoch 128/170 => Clf loss: 0.004 Aux loss: 0.005, Train Accu: 99.958, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:20:39,726 | INFO | root 	 Task 3/5, Epoch 129/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 99.958, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:20:53,491 | INFO | root 	 Task 3/5, Epoch 130/170 => Clf loss: 0.003 Aux loss: 0.005, Train Accu: 99.983, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:21:07,814 | INFO | root 	 Task 3/5, Epoch 131/170 => Clf loss: 0.004 Aux loss: 0.005, Train Accu: 99.95, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:21:21,765 | INFO | root 	 Task 3/5, Epoch 132/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 99.975, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:21:35,416 | INFO | root 	 Task 3/5, Epoch 133/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 99.975, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:21:54,671 | INFO | root 	 Task 3/5, Epoch 134/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 99.967, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:22:08,689 | INFO | root 	 Task 3/5, Epoch 135/170 => Clf loss: 0.003 Aux loss: 0.004, Train Accu: 99.983, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:22:22,841 | INFO | root 	 Task 3/5, Epoch 136/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 99.983, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:22:37,100 | INFO | root 	 Task 3/5, Epoch 137/170 => Clf loss: 0.004 Aux loss: 0.004, Train Accu: 99.95, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:22:50,931 | INFO | root 	 Task 3/5, Epoch 138/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 99.975, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:23:05,189 | INFO | root 	 Task 3/5, Epoch 139/170 => Clf loss: 0.003 Aux loss: 0.004, Train Accu: 99.95, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:23:19,546 | INFO | root 	 Task 3/5, Epoch 140/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 99.992, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:23:33,514 | INFO | root 	 Task 3/5, Epoch 141/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 99.958, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:23:53,762 | INFO | root 	 Task 3/5, Epoch 142/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 99.983, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:24:08,890 | INFO | root 	 Task 3/5, Epoch 143/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 99.992, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:24:22,915 | INFO | root 	 Task 3/5, Epoch 144/170 => Clf loss: 0.002 Aux loss: 0.002, Train Accu: 100.0, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:24:36,771 | INFO | root 	 Task 3/5, Epoch 145/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 99.983, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:24:50,677 | INFO | root 	 Task 3/5, Epoch 146/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 99.992, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:25:04,574 | INFO | root 	 Task 3/5, Epoch 147/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 99.967, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:25:18,678 | INFO | root 	 Task 3/5, Epoch 148/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 99.967, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:25:32,918 | INFO | root 	 Task 3/5, Epoch 149/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 99.992, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:25:46,915 | INFO | root 	 Task 3/5, Epoch 150/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 99.975, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:26:01,070 | INFO | root 	 Task 3/5, Epoch 151/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 99.95, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:26:15,117 | INFO | root 	 Task 3/5, Epoch 152/170 => Clf loss: 0.003 Aux loss: 0.002, Train Accu: 99.983, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:26:28,938 | INFO | root 	 Task 3/5, Epoch 153/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 99.992, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:26:42,948 | INFO | root 	 Task 3/5, Epoch 154/170 => Clf loss: 0.002 Aux loss: 0.003, Train Accu: 99.992, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:26:56,906 | INFO | root 	 Task 3/5, Epoch 155/170 => Clf loss: 0.003 Aux loss: 0.002, Train Accu: 99.992, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:27:10,643 | INFO | root 	 Task 3/5, Epoch 156/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 99.975, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:27:24,303 | INFO | root 	 Task 3/5, Epoch 157/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 99.992, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:27:38,205 | INFO | root 	 Task 3/5, Epoch 158/170 => Clf loss: 0.002 Aux loss: 0.002, Train Accu: 99.983, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:27:52,391 | INFO | root 	 Task 3/5, Epoch 159/170 => Clf loss: 0.002 Aux loss: 0.002, Train Accu: 99.992, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:28:06,462 | INFO | root 	 Task 3/5, Epoch 160/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 99.958, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:28:20,458 | INFO | root 	 Task 3/5, Epoch 161/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 99.967, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:28:34,466 | INFO | root 	 Task 3/5, Epoch 162/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 99.983, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:28:48,442 | INFO | root 	 Task 3/5, Epoch 163/170 => Clf loss: 0.002 Aux loss: 0.002, Train Accu: 100.0, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:29:02,413 | INFO | root 	 Task 3/5, Epoch 164/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 99.983, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:29:16,384 | INFO | root 	 Task 3/5, Epoch 165/170 => Clf loss: 0.003 Aux loss: 0.002, Train Accu: 99.975, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:29:30,527 | INFO | root 	 Task 3/5, Epoch 166/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 99.958, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:29:44,591 | INFO | root 	 Task 3/5, Epoch 167/170 => Clf loss: 0.003 Aux loss: 0.002, Train Accu: 99.967, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:29:58,605 | INFO | root 	 Task 3/5, Epoch 168/170 => Clf loss: 0.002 Aux loss: 0.002, Train Accu: 100.0, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:30:12,716 | INFO | root 	 Task 3/5, Epoch 169/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 99.983, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:30:26,909 | INFO | root 	 Task 3/5, Epoch 170/170 => Clf loss: 0.002 Aux loss: 0.003, Train Accu: 99.992, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:30:26,911 | INFO | root 	 After training: Weight norm per class [2.192, 2.408, 2.835]
+
+ 2021-09-24 10:30:47,688 | INFO | root 	 Trainset: Feature norm per class [7.526, 7.27, 6.626]
+
+ 2021-09-24 10:30:47,737 | INFO | root 	 save model
+
+ 2021-09-24 10:30:48,103 | INFO | root 	 Begin finetuning last layer
+
+ 2021-09-24 10:30:52,370 | INFO | root 	 Epoch 0 finetuning loss 1.481 acc 0.909
+
+ 2021-09-24 10:30:56,461 | INFO | root 	 Epoch 1 finetuning loss 0.765 acc 0.999
+
+ 2021-09-24 10:31:00,759 | INFO | root 	 Epoch 2 finetuning loss 0.437 acc 0.998
+
+ 2021-09-24 10:31:05,055 | INFO | root 	 Epoch 3 finetuning loss 0.304 acc 0.999
+
+ 2021-09-24 10:31:09,351 | INFO | root 	 Epoch 4 finetuning loss 0.238 acc 1.000
+
+ 2021-09-24 10:31:13,410 | INFO | root 	 Epoch 5 finetuning loss 0.197 acc 0.999
+
+ 2021-09-24 10:31:17,621 | INFO | root 	 Epoch 6 finetuning loss 0.171 acc 0.999
+
+ 2021-09-24 10:31:22,017 | INFO | root 	 Epoch 7 finetuning loss 0.150 acc 1.000
+
+ 2021-09-24 10:31:26,325 | INFO | root 	 Epoch 8 finetuning loss 0.136 acc 0.998
+
+ 2021-09-24 10:31:30,564 | INFO | root 	 Epoch 9 finetuning loss 0.126 acc 1.000
+
+ 2021-09-24 10:31:37,766 | INFO | root 	 Epoch 10 finetuning loss 0.114 acc 1.000
+
+ 2021-09-24 10:31:44,645 | INFO | root 	 Epoch 11 finetuning loss 0.105 acc 1.000
+
+ 2021-09-24 10:31:50,361 | INFO | root 	 Epoch 12 finetuning loss 0.099 acc 1.000
+
+ 2021-09-24 10:31:54,286 | INFO | root 	 Epoch 13 finetuning loss 0.094 acc 1.000
+
+ 2021-09-24 10:31:58,552 | INFO | root 	 Epoch 14 finetuning loss 0.089 acc 1.000
+
+ 2021-09-24 10:32:02,854 | INFO | root 	 Epoch 15 finetuning loss 0.086 acc 0.999
+
+ 2021-09-24 10:32:06,912 | INFO | root 	 Epoch 16 finetuning loss 0.085 acc 1.000
+
+ 2021-09-24 10:32:11,253 | INFO | root 	 Epoch 17 finetuning loss 0.087 acc 1.000
+
+ 2021-09-24 10:32:15,659 | INFO | root 	 Epoch 18 finetuning loss 0.087 acc 1.000
+
+ 2021-09-24 10:32:21,427 | INFO | root 	 Epoch 19 finetuning loss 0.086 acc 0.999
+
+ 2021-09-24 10:32:27,125 | INFO | root 	 Epoch 20 finetuning loss 0.086 acc 0.999
+
+ 2021-09-24 10:32:33,568 | INFO | root 	 Epoch 21 finetuning loss 0.085 acc 0.999
+
+ 2021-09-24 10:32:39,824 | INFO | root 	 Epoch 22 finetuning loss 0.085 acc 1.000
+
+ 2021-09-24 10:32:45,512 | INFO | root 	 Epoch 23 finetuning loss 0.083 acc 0.999
+
+ 2021-09-24 10:32:52,603 | INFO | root 	 Epoch 24 finetuning loss 0.083 acc 0.999
+
+ 2021-09-24 10:32:58,946 | INFO | root 	 Epoch 25 finetuning loss 0.083 acc 0.999
+
+ 2021-09-24 10:33:05,690 | INFO | root 	 Epoch 26 finetuning loss 0.084 acc 0.999
+
+ 2021-09-24 10:33:10,318 | INFO | root 	 Epoch 27 finetuning loss 0.082 acc 0.999
+
+ 2021-09-24 10:33:15,978 | INFO | root 	 Epoch 28 finetuning loss 0.084 acc 1.000
+
+ 2021-09-24 10:33:21,793 | INFO | root 	 Epoch 29 finetuning loss 0.082 acc 0.999
+
+ 2021-09-24 10:33:26,890 | INFO | root 	 Epoch 30 finetuning loss 0.083 acc 0.999
+
+ 2021-09-24 10:33:31,317 | INFO | root 	 Epoch 31 finetuning loss 0.083 acc 0.999
+
+ 2021-09-24 10:33:35,598 | INFO | root 	 Epoch 32 finetuning loss 0.082 acc 0.999
+
+ 2021-09-24 10:33:39,848 | INFO | root 	 Epoch 33 finetuning loss 0.081 acc 1.000
+
+ 2021-09-24 10:33:44,204 | INFO | root 	 Epoch 34 finetuning loss 0.082 acc 0.999
+
+ 2021-09-24 10:33:48,630 | INFO | root 	 Epoch 35 finetuning loss 0.084 acc 0.999
+
+ 2021-09-24 10:33:53,068 | INFO | root 	 Epoch 36 finetuning loss 0.081 acc 0.999
+
+ 2021-09-24 10:33:57,444 | INFO | root 	 Epoch 37 finetuning loss 0.082 acc 1.000
+
+ 2021-09-24 10:34:01,762 | INFO | root 	 Epoch 38 finetuning loss 0.081 acc 0.999
+
+ 2021-09-24 10:34:06,098 | INFO | root 	 Epoch 39 finetuning loss 0.082 acc 0.999
+
+ 2021-09-24 10:34:10,491 | INFO | root 	 Epoch 40 finetuning loss 0.082 acc 0.999
+
+ 2021-09-24 10:34:14,895 | INFO | root 	 Epoch 41 finetuning loss 0.081 acc 1.000
+
+ 2021-09-24 10:34:19,133 | INFO | root 	 Epoch 42 finetuning loss 0.082 acc 1.000
+
+ 2021-09-24 10:34:23,751 | INFO | root 	 Epoch 43 finetuning loss 0.084 acc 0.999
+
+ 2021-09-24 10:34:28,115 | INFO | root 	 Epoch 44 finetuning loss 0.081 acc 0.999
+
+ 2021-09-24 10:34:32,462 | INFO | root 	 Epoch 45 finetuning loss 0.082 acc 0.999
+
+ 2021-09-24 10:34:36,829 | INFO | root 	 Epoch 46 finetuning loss 0.081 acc 0.999
+
+ 2021-09-24 10:34:41,516 | INFO | root 	 Epoch 47 finetuning loss 0.082 acc 0.999
+
+ 2021-09-24 10:34:46,094 | INFO | root 	 Epoch 48 finetuning loss 0.083 acc 0.999
+
+ 2021-09-24 10:34:50,388 | INFO | root 	 Epoch 49 finetuning loss 0.082 acc 0.999
+
+ 2021-09-24 10:34:50,907 | INFO | root 	 build memory
+
+ 2021-09-24 10:34:50,907 | INFO | root 	 Building & updating memory.(iCaRL)
+
+ 2021-09-24 10:34:58,232 | INFO | root 	 Save step2 memory!
+
+ 2021-09-24 10:34:58,445 | INFO | root 	 Eval on 0->6.
+
+ 2021-09-24 10:35:03,933 | INFO | root 	 top1:{'total': 85.633, '00-01': 81.6, '02-03': 79.25, '04-05': 96.05}
+
+ 2021-09-24 10:35:03,934 | INFO | root 	 top5:{'total': 99.817, '00-01': 94.55, '02-03': 96.25, '04-05': 98.55}
+
+ 2021-09-24 10:35:04,873 | INFO | root 	 Begin step 3
+
+ 2021-09-24 10:35:04,873 | INFO | root 	 Now [250, 250, 250, 250, 250, 250, 250, 250] examplars per class.
+
+ 2021-09-24 10:35:05,188 | INFO | root 	 Step 3 weight decay 0.00050
+
+ 2021-09-24 10:35:05,194 | INFO | root 	 Train on 6->8.
+
+ 2021-09-24 10:35:05,199 | INFO | root 	 nb 11998
+
+ 2021-09-24 10:35:05,201 | INFO | root 	 Initial trainset: Weight norm per class [0.98, 0.989, 1.002, 0.982]
+
+ 2021-09-24 10:35:30,899 | INFO | root 	 Initial trainset: Feature norm per class [9.038, 8.855, 8.096, 6.868]
+
+ 2021-09-24 10:35:48,544 | INFO | root 	 Task 4/5, Epoch 1/170 => Clf loss: 0.512 Aux loss: 0.389, Train Accu: 86.489, Train@5 Acc: 99.358, old acc:nan
+
+ 2021-09-24 10:36:05,769 | INFO | root 	 Task 4/5, Epoch 2/170 => Clf loss: 0.168 Aux loss: 0.177, Train Accu: 94.982, Train@5 Acc: 99.983, old acc:nan
+
+ 2021-09-24 10:36:23,073 | INFO | root 	 Task 4/5, Epoch 3/170 => Clf loss: 0.103 Aux loss: 0.125, Train Accu: 96.741, Train@5 Acc: 99.992, old acc:nan
+
+ 2021-09-24 10:36:40,965 | INFO | root 	 Task 4/5, Epoch 4/170 => Clf loss: 0.095 Aux loss: 0.125, Train Accu: 97.033, Train@5 Acc: 99.992, old acc:nan
+
+ 2021-09-24 10:36:59,036 | INFO | root 	 Task 4/5, Epoch 5/170 => Clf loss: 0.081 Aux loss: 0.112, Train Accu: 97.291, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:37:16,772 | INFO | root 	 Task 4/5, Epoch 6/170 => Clf loss: 0.077 Aux loss: 0.112, Train Accu: 97.5, Train@5 Acc: 99.992, old acc:nan
+
+ 2021-09-24 10:37:34,624 | INFO | root 	 Task 4/5, Epoch 7/170 => Clf loss: 0.069 Aux loss: 0.111, Train Accu: 97.708, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:37:52,488 | INFO | root 	 Task 4/5, Epoch 8/170 => Clf loss: 0.066 Aux loss: 0.112, Train Accu: 97.608, Train@5 Acc: 99.992, old acc:nan
+
+ 2021-09-24 10:38:10,404 | INFO | root 	 Task 4/5, Epoch 9/170 => Clf loss: 0.071 Aux loss: 0.122, Train Accu: 97.65, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:38:28,212 | INFO | root 	 Task 4/5, Epoch 10/170 => Clf loss: 0.069 Aux loss: 0.128, Train Accu: 97.558, Train@5 Acc: 99.992, old acc:nan
+
+ 2021-09-24 10:38:45,863 | INFO | root 	 Task 4/5, Epoch 11/170 => Clf loss: 0.187 Aux loss: 0.18, Train Accu: 94.532, Train@5 Acc: 99.208, old acc:nan
+
+ 2021-09-24 10:39:03,141 | INFO | root 	 Task 4/5, Epoch 12/170 => Clf loss: 0.063 Aux loss: 0.108, Train Accu: 97.858, Train@5 Acc: 99.992, old acc:nan
+
+ 2021-09-24 10:39:22,005 | INFO | root 	 Task 4/5, Epoch 13/170 => Clf loss: 0.057 Aux loss: 0.098, Train Accu: 98.133, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:39:50,313 | INFO | root 	 Task 4/5, Epoch 14/170 => Clf loss: 0.056 Aux loss: 0.103, Train Accu: 98.216, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:40:13,766 | INFO | root 	 Task 4/5, Epoch 15/170 => Clf loss: 0.049 Aux loss: 0.089, Train Accu: 98.366, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:40:39,127 | INFO | root 	 Task 4/5, Epoch 16/170 => Clf loss: 0.05 Aux loss: 0.094, Train Accu: 98.15, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:41:01,301 | INFO | root 	 Task 4/5, Epoch 17/170 => Clf loss: 0.054 Aux loss: 0.098, Train Accu: 98.141, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:41:21,973 | INFO | root 	 Task 4/5, Epoch 18/170 => Clf loss: 0.05 Aux loss: 0.096, Train Accu: 98.366, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:41:44,883 | INFO | root 	 Task 4/5, Epoch 19/170 => Clf loss: 0.05 Aux loss: 0.091, Train Accu: 98.375, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:42:04,244 | INFO | root 	 Task 4/5, Epoch 20/170 => Clf loss: 0.044 Aux loss: 0.086, Train Accu: 98.6, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:42:24,395 | INFO | root 	 Task 4/5, Epoch 21/170 => Clf loss: 0.055 Aux loss: 0.1, Train Accu: 98.125, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:42:43,682 | INFO | root 	 Task 4/5, Epoch 22/170 => Clf loss: 0.043 Aux loss: 0.079, Train Accu: 98.591, Train@5 Acc: 99.992, old acc:nan
+
+ 2021-09-24 10:43:02,540 | INFO | root 	 Task 4/5, Epoch 23/170 => Clf loss: 0.038 Aux loss: 0.079, Train Accu: 98.758, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:43:22,406 | INFO | root 	 Task 4/5, Epoch 24/170 => Clf loss: 0.039 Aux loss: 0.074, Train Accu: 98.716, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:43:41,886 | INFO | root 	 Task 4/5, Epoch 25/170 => Clf loss: 0.039 Aux loss: 0.078, Train Accu: 98.716, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:44:01,003 | INFO | root 	 Task 4/5, Epoch 26/170 => Clf loss: 0.048 Aux loss: 0.091, Train Accu: 98.475, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:44:19,576 | INFO | root 	 Task 4/5, Epoch 27/170 => Clf loss: 0.04 Aux loss: 0.082, Train Accu: 98.525, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:44:38,293 | INFO | root 	 Task 4/5, Epoch 28/170 => Clf loss: 0.042 Aux loss: 0.084, Train Accu: 98.491, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:44:58,431 | INFO | root 	 Task 4/5, Epoch 29/170 => Clf loss: 0.038 Aux loss: 0.083, Train Accu: 98.758, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:45:16,571 | INFO | root 	 Task 4/5, Epoch 30/170 => Clf loss: 0.044 Aux loss: 0.087, Train Accu: 98.525, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:45:34,384 | INFO | root 	 Task 4/5, Epoch 31/170 => Clf loss: 0.04 Aux loss: 0.075, Train Accu: 98.708, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:45:51,981 | INFO | root 	 Task 4/5, Epoch 32/170 => Clf loss: 0.041 Aux loss: 0.083, Train Accu: 98.591, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:46:10,162 | INFO | root 	 Task 4/5, Epoch 33/170 => Clf loss: 0.037 Aux loss: 0.075, Train Accu: 98.725, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:46:27,841 | INFO | root 	 Task 4/5, Epoch 34/170 => Clf loss: 0.04 Aux loss: 0.079, Train Accu: 98.641, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:46:45,948 | INFO | root 	 Task 4/5, Epoch 35/170 => Clf loss: 0.039 Aux loss: 0.076, Train Accu: 98.741, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:47:03,922 | INFO | root 	 Task 4/5, Epoch 36/170 => Clf loss: 0.037 Aux loss: 0.078, Train Accu: 98.741, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:47:21,753 | INFO | root 	 Task 4/5, Epoch 37/170 => Clf loss: 0.033 Aux loss: 0.069, Train Accu: 98.858, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:47:39,814 | INFO | root 	 Task 4/5, Epoch 38/170 => Clf loss: 0.041 Aux loss: 0.081, Train Accu: 98.583, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:48:00,875 | INFO | root 	 Task 4/5, Epoch 39/170 => Clf loss: 0.043 Aux loss: 0.084, Train Accu: 98.516, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:48:18,889 | INFO | root 	 Task 4/5, Epoch 40/170 => Clf loss: 0.039 Aux loss: 0.075, Train Accu: 98.733, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:48:36,672 | INFO | root 	 Task 4/5, Epoch 41/170 => Clf loss: 0.037 Aux loss: 0.078, Train Accu: 98.766, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:48:54,423 | INFO | root 	 Task 4/5, Epoch 42/170 => Clf loss: 0.032 Aux loss: 0.066, Train Accu: 98.925, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:49:12,399 | INFO | root 	 Task 4/5, Epoch 43/170 => Clf loss: 0.044 Aux loss: 0.09, Train Accu: 98.433, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:49:30,569 | INFO | root 	 Task 4/5, Epoch 44/170 => Clf loss: 0.037 Aux loss: 0.077, Train Accu: 98.866, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:49:48,681 | INFO | root 	 Task 4/5, Epoch 45/170 => Clf loss: 0.031 Aux loss: 0.067, Train Accu: 99.042, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:50:06,544 | INFO | root 	 Task 4/5, Epoch 46/170 => Clf loss: 0.036 Aux loss: 0.071, Train Accu: 98.808, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:50:24,316 | INFO | root 	 Task 4/5, Epoch 47/170 => Clf loss: 0.038 Aux loss: 0.077, Train Accu: 98.775, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:50:42,187 | INFO | root 	 Task 4/5, Epoch 48/170 => Clf loss: 0.035 Aux loss: 0.069, Train Accu: 98.95, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:50:59,953 | INFO | root 	 Task 4/5, Epoch 49/170 => Clf loss: 0.036 Aux loss: 0.075, Train Accu: 98.775, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:51:17,491 | INFO | root 	 Task 4/5, Epoch 50/170 => Clf loss: 0.033 Aux loss: 0.069, Train Accu: 98.85, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:51:35,574 | INFO | root 	 Task 4/5, Epoch 51/170 => Clf loss: 0.033 Aux loss: 0.071, Train Accu: 98.858, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:51:53,708 | INFO | root 	 Task 4/5, Epoch 52/170 => Clf loss: 0.038 Aux loss: 0.082, Train Accu: 98.716, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:52:11,550 | INFO | root 	 Task 4/5, Epoch 53/170 => Clf loss: 0.038 Aux loss: 0.077, Train Accu: 98.833, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:52:29,112 | INFO | root 	 Task 4/5, Epoch 54/170 => Clf loss: 0.04 Aux loss: 0.078, Train Accu: 98.691, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:52:47,133 | INFO | root 	 Task 4/5, Epoch 55/170 => Clf loss: 0.036 Aux loss: 0.073, Train Accu: 98.8, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:53:04,536 | INFO | root 	 Task 4/5, Epoch 56/170 => Clf loss: 0.038 Aux loss: 0.075, Train Accu: 98.741, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:53:21,804 | INFO | root 	 Task 4/5, Epoch 57/170 => Clf loss: 0.033 Aux loss: 0.071, Train Accu: 98.925, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:53:39,356 | INFO | root 	 Task 4/5, Epoch 58/170 => Clf loss: 0.035 Aux loss: 0.069, Train Accu: 98.858, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:53:57,096 | INFO | root 	 Task 4/5, Epoch 59/170 => Clf loss: 0.036 Aux loss: 0.074, Train Accu: 98.783, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:54:14,738 | INFO | root 	 Task 4/5, Epoch 60/170 => Clf loss: 0.036 Aux loss: 0.075, Train Accu: 98.8, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:54:32,344 | INFO | root 	 Task 4/5, Epoch 61/170 => Clf loss: 0.034 Aux loss: 0.073, Train Accu: 98.933, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:54:50,992 | INFO | root 	 Task 4/5, Epoch 62/170 => Clf loss: 0.04 Aux loss: 0.085, Train Accu: 98.683, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:55:10,596 | INFO | root 	 Task 4/5, Epoch 63/170 => Clf loss: 0.032 Aux loss: 0.066, Train Accu: 98.858, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:55:30,849 | INFO | root 	 Task 4/5, Epoch 64/170 => Clf loss: 0.033 Aux loss: 0.07, Train Accu: 98.875, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:55:48,956 | INFO | root 	 Task 4/5, Epoch 65/170 => Clf loss: 0.043 Aux loss: 0.092, Train Accu: 98.491, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:56:06,774 | INFO | root 	 Task 4/5, Epoch 66/170 => Clf loss: 0.033 Aux loss: 0.071, Train Accu: 98.775, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:56:25,085 | INFO | root 	 Task 4/5, Epoch 67/170 => Clf loss: 0.033 Aux loss: 0.07, Train Accu: 98.941, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:56:42,736 | INFO | root 	 Task 4/5, Epoch 68/170 => Clf loss: 0.035 Aux loss: 0.073, Train Accu: 98.866, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:57:01,307 | INFO | root 	 Task 4/5, Epoch 69/170 => Clf loss: 0.039 Aux loss: 0.077, Train Accu: 98.741, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:57:19,215 | INFO | root 	 Task 4/5, Epoch 70/170 => Clf loss: 0.03 Aux loss: 0.065, Train Accu: 99.017, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:57:39,380 | INFO | root 	 Task 4/5, Epoch 71/170 => Clf loss: 0.037 Aux loss: 0.076, Train Accu: 98.875, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:57:59,152 | INFO | root 	 Task 4/5, Epoch 72/170 => Clf loss: 0.032 Aux loss: 0.065, Train Accu: 98.833, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:58:19,333 | INFO | root 	 Task 4/5, Epoch 73/170 => Clf loss: 0.031 Aux loss: 0.069, Train Accu: 98.9, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:58:39,259 | INFO | root 	 Task 4/5, Epoch 74/170 => Clf loss: 0.032 Aux loss: 0.069, Train Accu: 98.941, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:58:59,300 | INFO | root 	 Task 4/5, Epoch 75/170 => Clf loss: 0.035 Aux loss: 0.078, Train Accu: 98.841, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:59:23,010 | INFO | root 	 Task 4/5, Epoch 76/170 => Clf loss: 0.045 Aux loss: 0.094, Train Accu: 98.416, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 10:59:47,604 | INFO | root 	 Task 4/5, Epoch 77/170 => Clf loss: 0.028 Aux loss: 0.063, Train Accu: 99.133, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:00:12,702 | INFO | root 	 Task 4/5, Epoch 78/170 => Clf loss: 0.036 Aux loss: 0.078, Train Accu: 98.766, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:00:34,945 | INFO | root 	 Task 4/5, Epoch 79/170 => Clf loss: 0.033 Aux loss: 0.067, Train Accu: 98.858, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:00:58,050 | INFO | root 	 Task 4/5, Epoch 80/170 => Clf loss: 0.036 Aux loss: 0.072, Train Accu: 98.791, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:01:19,904 | INFO | root 	 Task 4/5, Epoch 81/170 => Clf loss: 0.029 Aux loss: 0.063, Train Accu: 99.067, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:01:46,088 | INFO | root 	 Task 4/5, Epoch 82/170 => Clf loss: 0.034 Aux loss: 0.067, Train Accu: 98.975, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:02:09,214 | INFO | root 	 Task 4/5, Epoch 83/170 => Clf loss: 0.031 Aux loss: 0.064, Train Accu: 98.975, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:02:28,833 | INFO | root 	 Task 4/5, Epoch 84/170 => Clf loss: 0.03 Aux loss: 0.065, Train Accu: 99.025, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:02:48,571 | INFO | root 	 Task 4/5, Epoch 85/170 => Clf loss: 0.035 Aux loss: 0.077, Train Accu: 98.883, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:03:08,358 | INFO | root 	 Task 4/5, Epoch 86/170 => Clf loss: 0.034 Aux loss: 0.069, Train Accu: 98.925, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:03:29,732 | INFO | root 	 Task 4/5, Epoch 87/170 => Clf loss: 0.031 Aux loss: 0.067, Train Accu: 99.033, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:03:49,909 | INFO | root 	 Task 4/5, Epoch 88/170 => Clf loss: 0.036 Aux loss: 0.073, Train Accu: 98.833, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:04:09,683 | INFO | root 	 Task 4/5, Epoch 89/170 => Clf loss: 0.037 Aux loss: 0.076, Train Accu: 98.783, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:04:29,733 | INFO | root 	 Task 4/5, Epoch 90/170 => Clf loss: 0.035 Aux loss: 0.075, Train Accu: 98.808, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:04:49,698 | INFO | root 	 Task 4/5, Epoch 91/170 => Clf loss: 0.032 Aux loss: 0.068, Train Accu: 98.991, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:05:09,664 | INFO | root 	 Task 4/5, Epoch 92/170 => Clf loss: 0.032 Aux loss: 0.066, Train Accu: 98.95, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:05:29,378 | INFO | root 	 Task 4/5, Epoch 93/170 => Clf loss: 0.031 Aux loss: 0.062, Train Accu: 99.017, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:05:48,935 | INFO | root 	 Task 4/5, Epoch 94/170 => Clf loss: 0.036 Aux loss: 0.077, Train Accu: 98.858, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:06:08,613 | INFO | root 	 Task 4/5, Epoch 95/170 => Clf loss: 0.032 Aux loss: 0.063, Train Accu: 98.95, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:06:28,724 | INFO | root 	 Task 4/5, Epoch 96/170 => Clf loss: 0.033 Aux loss: 0.074, Train Accu: 98.883, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:06:48,750 | INFO | root 	 Task 4/5, Epoch 97/170 => Clf loss: 0.034 Aux loss: 0.069, Train Accu: 98.875, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:07:08,716 | INFO | root 	 Task 4/5, Epoch 98/170 => Clf loss: 0.029 Aux loss: 0.062, Train Accu: 99.033, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:07:28,695 | INFO | root 	 Task 4/5, Epoch 99/170 => Clf loss: 0.034 Aux loss: 0.069, Train Accu: 98.925, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:07:48,767 | INFO | root 	 Task 4/5, Epoch 100/170 => Clf loss: 0.033 Aux loss: 0.069, Train Accu: 98.875, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:08:08,542 | INFO | root 	 Task 4/5, Epoch 101/170 => Clf loss: 0.034 Aux loss: 0.07, Train Accu: 98.775, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:08:28,279 | INFO | root 	 Task 4/5, Epoch 102/170 => Clf loss: 0.042 Aux loss: 0.083, Train Accu: 98.6, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:08:48,256 | INFO | root 	 Task 4/5, Epoch 103/170 => Clf loss: 0.033 Aux loss: 0.071, Train Accu: 98.866, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:09:07,722 | INFO | root 	 Task 4/5, Epoch 104/170 => Clf loss: 0.029 Aux loss: 0.061, Train Accu: 99.025, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:09:27,446 | INFO | root 	 Task 4/5, Epoch 105/170 => Clf loss: 0.03 Aux loss: 0.064, Train Accu: 98.966, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:09:46,738 | INFO | root 	 Task 4/5, Epoch 106/170 => Clf loss: 0.036 Aux loss: 0.077, Train Accu: 98.775, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:10:06,511 | INFO | root 	 Task 4/5, Epoch 107/170 => Clf loss: 0.033 Aux loss: 0.073, Train Accu: 98.933, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:10:26,169 | INFO | root 	 Task 4/5, Epoch 108/170 => Clf loss: 0.03 Aux loss: 0.059, Train Accu: 99.075, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:10:46,171 | INFO | root 	 Task 4/5, Epoch 109/170 => Clf loss: 0.032 Aux loss: 0.065, Train Accu: 98.983, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:11:05,828 | INFO | root 	 Task 4/5, Epoch 110/170 => Clf loss: 0.035 Aux loss: 0.07, Train Accu: 98.766, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:11:25,928 | INFO | root 	 Task 4/5, Epoch 111/170 => Clf loss: 0.018 Aux loss: 0.033, Train Accu: 99.492, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:11:45,604 | INFO | root 	 Task 4/5, Epoch 112/170 => Clf loss: 0.011 Aux loss: 0.018, Train Accu: 99.758, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:12:05,513 | INFO | root 	 Task 4/5, Epoch 113/170 => Clf loss: 0.008 Aux loss: 0.012, Train Accu: 99.892, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:12:25,704 | INFO | root 	 Task 4/5, Epoch 114/170 => Clf loss: 0.007 Aux loss: 0.012, Train Accu: 99.9, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:12:45,559 | INFO | root 	 Task 4/5, Epoch 115/170 => Clf loss: 0.005 Aux loss: 0.009, Train Accu: 99.958, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:13:05,371 | INFO | root 	 Task 4/5, Epoch 116/170 => Clf loss: 0.005 Aux loss: 0.009, Train Accu: 99.942, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:13:25,010 | INFO | root 	 Task 4/5, Epoch 117/170 => Clf loss: 0.004 Aux loss: 0.006, Train Accu: 99.967, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:13:45,026 | INFO | root 	 Task 4/5, Epoch 118/170 => Clf loss: 0.004 Aux loss: 0.005, Train Accu: 99.967, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:14:04,832 | INFO | root 	 Task 4/5, Epoch 119/170 => Clf loss: 0.004 Aux loss: 0.005, Train Accu: 99.95, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:14:24,842 | INFO | root 	 Task 4/5, Epoch 120/170 => Clf loss: 0.004 Aux loss: 0.004, Train Accu: 99.958, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:14:44,719 | INFO | root 	 Task 4/5, Epoch 121/170 => Clf loss: 0.003 Aux loss: 0.005, Train Accu: 99.983, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:15:04,677 | INFO | root 	 Task 4/5, Epoch 122/170 => Clf loss: 0.003 Aux loss: 0.004, Train Accu: 99.975, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:15:24,526 | INFO | root 	 Task 4/5, Epoch 123/170 => Clf loss: 0.003 Aux loss: 0.004, Train Accu: 99.967, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:15:44,237 | INFO | root 	 Task 4/5, Epoch 124/170 => Clf loss: 0.003 Aux loss: 0.004, Train Accu: 99.967, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:16:04,122 | INFO | root 	 Task 4/5, Epoch 125/170 => Clf loss: 0.003 Aux loss: 0.004, Train Accu: 99.992, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:16:23,852 | INFO | root 	 Task 4/5, Epoch 126/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 99.967, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:16:43,732 | INFO | root 	 Task 4/5, Epoch 127/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 99.992, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:17:03,459 | INFO | root 	 Task 4/5, Epoch 128/170 => Clf loss: 0.003 Aux loss: 0.004, Train Accu: 99.958, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:17:23,446 | INFO | root 	 Task 4/5, Epoch 129/170 => Clf loss: 0.003 Aux loss: 0.002, Train Accu: 99.967, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:17:43,212 | INFO | root 	 Task 4/5, Epoch 130/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 100.0, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:18:02,972 | INFO | root 	 Task 4/5, Epoch 131/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 99.975, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:18:22,705 | INFO | root 	 Task 4/5, Epoch 132/170 => Clf loss: 0.003 Aux loss: 0.002, Train Accu: 100.0, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:18:42,661 | INFO | root 	 Task 4/5, Epoch 133/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 100.0, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:19:02,539 | INFO | root 	 Task 4/5, Epoch 134/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 100.0, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:19:22,015 | INFO | root 	 Task 4/5, Epoch 135/170 => Clf loss: 0.003 Aux loss: 0.002, Train Accu: 99.983, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:19:41,772 | INFO | root 	 Task 4/5, Epoch 136/170 => Clf loss: 0.002 Aux loss: 0.002, Train Accu: 100.0, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:20:01,448 | INFO | root 	 Task 4/5, Epoch 137/170 => Clf loss: 0.003 Aux loss: 0.002, Train Accu: 100.0, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:20:21,190 | INFO | root 	 Task 4/5, Epoch 138/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 99.992, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:20:41,113 | INFO | root 	 Task 4/5, Epoch 139/170 => Clf loss: 0.003 Aux loss: 0.002, Train Accu: 100.0, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:21:01,060 | INFO | root 	 Task 4/5, Epoch 140/170 => Clf loss: 0.002 Aux loss: 0.002, Train Accu: 100.0, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:21:20,745 | INFO | root 	 Task 4/5, Epoch 141/170 => Clf loss: 0.002 Aux loss: 0.002, Train Accu: 100.0, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:21:40,706 | INFO | root 	 Task 4/5, Epoch 142/170 => Clf loss: 0.003 Aux loss: 0.002, Train Accu: 99.983, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:22:00,368 | INFO | root 	 Task 4/5, Epoch 143/170 => Clf loss: 0.003 Aux loss: 0.002, Train Accu: 99.983, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:22:20,002 | INFO | root 	 Task 4/5, Epoch 144/170 => Clf loss: 0.002 Aux loss: 0.002, Train Accu: 99.975, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:22:40,269 | INFO | root 	 Task 4/5, Epoch 145/170 => Clf loss: 0.003 Aux loss: 0.002, Train Accu: 99.983, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:23:00,073 | INFO | root 	 Task 4/5, Epoch 146/170 => Clf loss: 0.003 Aux loss: 0.002, Train Accu: 99.992, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:23:19,932 | INFO | root 	 Task 4/5, Epoch 147/170 => Clf loss: 0.003 Aux loss: 0.002, Train Accu: 100.0, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:23:39,676 | INFO | root 	 Task 4/5, Epoch 148/170 => Clf loss: 0.002 Aux loss: 0.002, Train Accu: 100.0, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:23:59,498 | INFO | root 	 Task 4/5, Epoch 149/170 => Clf loss: 0.002 Aux loss: 0.002, Train Accu: 99.992, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:24:19,087 | INFO | root 	 Task 4/5, Epoch 150/170 => Clf loss: 0.002 Aux loss: 0.002, Train Accu: 99.992, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:24:38,790 | INFO | root 	 Task 4/5, Epoch 151/170 => Clf loss: 0.002 Aux loss: 0.001, Train Accu: 100.0, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:24:58,419 | INFO | root 	 Task 4/5, Epoch 152/170 => Clf loss: 0.003 Aux loss: 0.002, Train Accu: 100.0, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:25:18,261 | INFO | root 	 Task 4/5, Epoch 153/170 => Clf loss: 0.003 Aux loss: 0.002, Train Accu: 99.992, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:25:37,584 | INFO | root 	 Task 4/5, Epoch 154/170 => Clf loss: 0.002 Aux loss: 0.002, Train Accu: 99.983, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:25:56,965 | INFO | root 	 Task 4/5, Epoch 155/170 => Clf loss: 0.003 Aux loss: 0.002, Train Accu: 99.983, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:26:17,195 | INFO | root 	 Task 4/5, Epoch 156/170 => Clf loss: 0.002 Aux loss: 0.001, Train Accu: 99.992, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:26:36,997 | INFO | root 	 Task 4/5, Epoch 157/170 => Clf loss: 0.002 Aux loss: 0.002, Train Accu: 100.0, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:26:57,049 | INFO | root 	 Task 4/5, Epoch 158/170 => Clf loss: 0.002 Aux loss: 0.001, Train Accu: 100.0, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:27:16,880 | INFO | root 	 Task 4/5, Epoch 159/170 => Clf loss: 0.002 Aux loss: 0.002, Train Accu: 100.0, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:27:36,907 | INFO | root 	 Task 4/5, Epoch 160/170 => Clf loss: 0.002 Aux loss: 0.001, Train Accu: 100.0, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:27:56,781 | INFO | root 	 Task 4/5, Epoch 161/170 => Clf loss: 0.002 Aux loss: 0.002, Train Accu: 99.983, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:28:16,563 | INFO | root 	 Task 4/5, Epoch 162/170 => Clf loss: 0.002 Aux loss: 0.002, Train Accu: 99.983, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:28:36,147 | INFO | root 	 Task 4/5, Epoch 163/170 => Clf loss: 0.003 Aux loss: 0.002, Train Accu: 99.992, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:28:55,648 | INFO | root 	 Task 4/5, Epoch 164/170 => Clf loss: 0.002 Aux loss: 0.001, Train Accu: 100.0, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:29:15,564 | INFO | root 	 Task 4/5, Epoch 165/170 => Clf loss: 0.002 Aux loss: 0.001, Train Accu: 99.992, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:29:35,208 | INFO | root 	 Task 4/5, Epoch 166/170 => Clf loss: 0.002 Aux loss: 0.002, Train Accu: 100.0, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:29:55,134 | INFO | root 	 Task 4/5, Epoch 167/170 => Clf loss: 0.003 Aux loss: 0.002, Train Accu: 99.992, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:30:15,381 | INFO | root 	 Task 4/5, Epoch 168/170 => Clf loss: 0.002 Aux loss: 0.002, Train Accu: 99.992, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:30:35,376 | INFO | root 	 Task 4/5, Epoch 169/170 => Clf loss: 0.002 Aux loss: 0.002, Train Accu: 100.0, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:30:55,469 | INFO | root 	 Task 4/5, Epoch 170/170 => Clf loss: 0.002 Aux loss: 0.001, Train Accu: 100.0, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:30:55,472 | INFO | root 	 After training: Weight norm per class [1.902, 1.978, 2.064, 2.69]
+
+ 2021-09-24 11:31:24,048 | INFO | root 	 Trainset: Feature norm per class [8.728, 8.513, 7.984, 7.728]
+
+ 2021-09-24 11:31:24,118 | INFO | root 	 save model
+
+ 2021-09-24 11:31:24,675 | INFO | root 	 Begin finetuning last layer
+
+ 2021-09-24 11:31:30,282 | INFO | root 	 Epoch 0 finetuning loss 1.822 acc 0.821
+
+ 2021-09-24 11:31:35,860 | INFO | root 	 Epoch 1 finetuning loss 1.120 acc 0.996
+
+ 2021-09-24 11:31:41,451 | INFO | root 	 Epoch 2 finetuning loss 0.685 acc 0.999
+
+ 2021-09-24 11:31:46,905 | INFO | root 	 Epoch 3 finetuning loss 0.477 acc 0.999
+
+ 2021-09-24 11:31:52,488 | INFO | root 	 Epoch 4 finetuning loss 0.365 acc 0.998
+
+ 2021-09-24 11:31:58,025 | INFO | root 	 Epoch 5 finetuning loss 0.298 acc 0.999
+
+ 2021-09-24 11:32:03,553 | INFO | root 	 Epoch 6 finetuning loss 0.252 acc 0.998
+
+ 2021-09-24 11:32:09,116 | INFO | root 	 Epoch 7 finetuning loss 0.220 acc 0.999
+
+ 2021-09-24 11:32:14,645 | INFO | root 	 Epoch 8 finetuning loss 0.198 acc 1.000
+
+ 2021-09-24 11:32:20,051 | INFO | root 	 Epoch 9 finetuning loss 0.179 acc 0.998
+
+ 2021-09-24 11:32:25,617 | INFO | root 	 Epoch 10 finetuning loss 0.166 acc 1.000
+
+ 2021-09-24 11:32:31,291 | INFO | root 	 Epoch 11 finetuning loss 0.153 acc 0.999
+
+ 2021-09-24 11:32:36,930 | INFO | root 	 Epoch 12 finetuning loss 0.141 acc 0.998
+
+ 2021-09-24 11:32:42,450 | INFO | root 	 Epoch 13 finetuning loss 0.132 acc 1.000
+
+ 2021-09-24 11:32:48,097 | INFO | root 	 Epoch 14 finetuning loss 0.128 acc 0.998
+
+ 2021-09-24 11:32:53,349 | INFO | root 	 Epoch 15 finetuning loss 0.121 acc 0.998
+
+ 2021-09-24 11:32:58,849 | INFO | root 	 Epoch 16 finetuning loss 0.121 acc 0.999
+
+ 2021-09-24 11:33:04,476 | INFO | root 	 Epoch 17 finetuning loss 0.120 acc 0.999
+
+ 2021-09-24 11:33:10,144 | INFO | root 	 Epoch 18 finetuning loss 0.119 acc 0.999
+
+ 2021-09-24 11:33:15,714 | INFO | root 	 Epoch 19 finetuning loss 0.122 acc 0.999
+
+ 2021-09-24 11:33:21,264 | INFO | root 	 Epoch 20 finetuning loss 0.120 acc 0.999
+
+ 2021-09-24 11:33:26,459 | INFO | root 	 Epoch 21 finetuning loss 0.120 acc 1.000
+
+ 2021-09-24 11:33:31,944 | INFO | root 	 Epoch 22 finetuning loss 0.120 acc 0.999
+
+ 2021-09-24 11:33:37,559 | INFO | root 	 Epoch 23 finetuning loss 0.118 acc 0.999
+
+ 2021-09-24 11:33:43,116 | INFO | root 	 Epoch 24 finetuning loss 0.116 acc 0.999
+
+ 2021-09-24 11:33:48,752 | INFO | root 	 Epoch 25 finetuning loss 0.117 acc 0.999
+
+ 2021-09-24 11:33:54,403 | INFO | root 	 Epoch 26 finetuning loss 0.116 acc 0.998
+
+ 2021-09-24 11:33:59,873 | INFO | root 	 Epoch 27 finetuning loss 0.115 acc 0.999
+
+ 2021-09-24 11:34:05,234 | INFO | root 	 Epoch 28 finetuning loss 0.115 acc 0.999
+
+ 2021-09-24 11:34:10,867 | INFO | root 	 Epoch 29 finetuning loss 0.114 acc 1.000
+
+ 2021-09-24 11:34:16,490 | INFO | root 	 Epoch 30 finetuning loss 0.114 acc 0.999
+
+ 2021-09-24 11:34:21,970 | INFO | root 	 Epoch 31 finetuning loss 0.114 acc 0.999
+
+ 2021-09-24 11:34:27,498 | INFO | root 	 Epoch 32 finetuning loss 0.114 acc 0.999
+
+ 2021-09-24 11:34:32,959 | INFO | root 	 Epoch 33 finetuning loss 0.116 acc 0.999
+
+ 2021-09-24 11:34:38,395 | INFO | root 	 Epoch 34 finetuning loss 0.115 acc 0.998
+
+ 2021-09-24 11:34:43,890 | INFO | root 	 Epoch 35 finetuning loss 0.115 acc 1.000
+
+ 2021-09-24 11:34:49,332 | INFO | root 	 Epoch 36 finetuning loss 0.116 acc 0.999
+
+ 2021-09-24 11:34:55,000 | INFO | root 	 Epoch 37 finetuning loss 0.115 acc 1.000
+
+ 2021-09-24 11:35:00,668 | INFO | root 	 Epoch 38 finetuning loss 0.115 acc 0.999
+
+ 2021-09-24 11:35:06,210 | INFO | root 	 Epoch 39 finetuning loss 0.113 acc 0.999
+
+ 2021-09-24 11:35:11,797 | INFO | root 	 Epoch 40 finetuning loss 0.114 acc 0.999
+
+ 2021-09-24 11:35:17,236 | INFO | root 	 Epoch 41 finetuning loss 0.115 acc 0.999
+
+ 2021-09-24 11:35:22,850 | INFO | root 	 Epoch 42 finetuning loss 0.113 acc 0.999
+
+ 2021-09-24 11:35:28,567 | INFO | root 	 Epoch 43 finetuning loss 0.116 acc 0.999
+
+ 2021-09-24 11:35:33,826 | INFO | root 	 Epoch 44 finetuning loss 0.110 acc 1.000
+
+ 2021-09-24 11:35:39,271 | INFO | root 	 Epoch 45 finetuning loss 0.113 acc 0.999
+
+ 2021-09-24 11:35:44,683 | INFO | root 	 Epoch 46 finetuning loss 0.112 acc 0.999
+
+ 2021-09-24 11:35:50,351 | INFO | root 	 Epoch 47 finetuning loss 0.113 acc 0.999
+
+ 2021-09-24 11:35:55,851 | INFO | root 	 Epoch 48 finetuning loss 0.113 acc 1.000
+
+ 2021-09-24 11:36:01,493 | INFO | root 	 Epoch 49 finetuning loss 0.113 acc 0.999
+
+ 2021-09-24 11:36:02,169 | INFO | root 	 build memory
+
+ 2021-09-24 11:36:02,169 | INFO | root 	 Building & updating memory.(iCaRL)
+
+ 2021-09-24 11:36:11,188 | INFO | root 	 Save step3 memory!
+
+ 2021-09-24 11:36:11,429 | INFO | root 	 Eval on 0->8.
+
+ 2021-09-24 11:36:21,107 | INFO | root 	 top1:{'total': 86.375, '00-01': 80.5, '02-03': 75.8, '04-05': 91.0, '06-07': 98.2}
+
+ 2021-09-24 11:36:21,107 | INFO | root 	 top5:{'total': 99.487, '00-01': 92.85, '02-03': 93.0, '04-05': 97.6, '06-07': 99.55}
+
+ 2021-09-24 11:36:22,235 | INFO | root 	 Begin step 4
+
+ 2021-09-24 11:36:22,236 | INFO | root 	 Now [200, 200, 200, 200, 200, 200, 200, 200, 200, 200] examplars per class.
+
+ 2021-09-24 11:36:22,625 | INFO | root 	 Step 4 weight decay 0.00050
+
+ 2021-09-24 11:36:22,634 | INFO | root 	 Train on 8->10.
+
+ 2021-09-24 11:36:22,639 | INFO | root 	 nb 12000
+
+ 2021-09-24 11:36:22,642 | INFO | root 	 Initial trainset: Weight norm per class [1.018, 0.984, 1.004, 1.002, 1.011]
+
+ 2021-09-24 11:36:54,292 | INFO | root 	 Initial trainset: Feature norm per class [9.762, 9.571, 9.082, 9.212, 8.288]
+
+ 2021-09-24 11:37:18,115 | INFO | root 	 Task 5/5, Epoch 1/170 => Clf loss: 0.677 Aux loss: 0.495, Train Accu: 82.708, Train@5 Acc: 98.317, old acc:nan
+
+ 2021-09-24 11:37:41,981 | INFO | root 	 Task 5/5, Epoch 2/170 => Clf loss: 0.23 Aux loss: 0.261, Train Accu: 92.8, Train@5 Acc: 99.967, old acc:nan
+
+ 2021-09-24 11:38:05,786 | INFO | root 	 Task 5/5, Epoch 3/170 => Clf loss: 0.161 Aux loss: 0.217, Train Accu: 94.917, Train@5 Acc: 99.975, old acc:nan
+
+ 2021-09-24 11:38:29,322 | INFO | root 	 Task 5/5, Epoch 4/170 => Clf loss: 0.129 Aux loss: 0.191, Train Accu: 95.683, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:38:53,251 | INFO | root 	 Task 5/5, Epoch 5/170 => Clf loss: 0.115 Aux loss: 0.179, Train Accu: 96.175, Train@5 Acc: 99.992, old acc:nan
+
+ 2021-09-24 11:39:17,027 | INFO | root 	 Task 5/5, Epoch 6/170 => Clf loss: 0.115 Aux loss: 0.181, Train Accu: 95.967, Train@5 Acc: 99.992, old acc:nan
+
+ 2021-09-24 11:39:40,875 | INFO | root 	 Task 5/5, Epoch 7/170 => Clf loss: 0.105 Aux loss: 0.176, Train Accu: 96.192, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:40:05,103 | INFO | root 	 Task 5/5, Epoch 8/170 => Clf loss: 0.101 Aux loss: 0.174, Train Accu: 96.683, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:40:28,908 | INFO | root 	 Task 5/5, Epoch 9/170 => Clf loss: 0.101 Aux loss: 0.174, Train Accu: 96.433, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:40:52,872 | INFO | root 	 Task 5/5, Epoch 10/170 => Clf loss: 0.096 Aux loss: 0.171, Train Accu: 96.658, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:41:16,926 | INFO | root 	 Task 5/5, Epoch 11/170 => Clf loss: 0.283 Aux loss: 0.28, Train Accu: 92.133, Train@5 Acc: 99.2, old acc:nan
+
+ 2021-09-24 11:41:40,463 | INFO | root 	 Task 5/5, Epoch 12/170 => Clf loss: 0.105 Aux loss: 0.179, Train Accu: 96.242, Train@5 Acc: 99.983, old acc:nan
+
+ 2021-09-24 11:42:04,102 | INFO | root 	 Task 5/5, Epoch 13/170 => Clf loss: 0.093 Aux loss: 0.159, Train Accu: 96.883, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:42:27,968 | INFO | root 	 Task 5/5, Epoch 14/170 => Clf loss: 0.088 Aux loss: 0.147, Train Accu: 96.992, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:42:51,747 | INFO | root 	 Task 5/5, Epoch 15/170 => Clf loss: 0.078 Aux loss: 0.138, Train Accu: 97.225, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:43:15,723 | INFO | root 	 Task 5/5, Epoch 16/170 => Clf loss: 0.079 Aux loss: 0.135, Train Accu: 97.333, Train@5 Acc: 99.983, old acc:nan
+
+ 2021-09-24 11:43:40,060 | INFO | root 	 Task 5/5, Epoch 17/170 => Clf loss: 0.07 Aux loss: 0.126, Train Accu: 97.683, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:44:04,122 | INFO | root 	 Task 5/5, Epoch 18/170 => Clf loss: 0.079 Aux loss: 0.135, Train Accu: 97.217, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:44:28,013 | INFO | root 	 Task 5/5, Epoch 19/170 => Clf loss: 0.075 Aux loss: 0.131, Train Accu: 97.367, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:44:52,167 | INFO | root 	 Task 5/5, Epoch 20/170 => Clf loss: 0.062 Aux loss: 0.115, Train Accu: 97.992, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:45:16,322 | INFO | root 	 Task 5/5, Epoch 21/170 => Clf loss: 0.07 Aux loss: 0.122, Train Accu: 97.367, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:45:40,344 | INFO | root 	 Task 5/5, Epoch 22/170 => Clf loss: 0.063 Aux loss: 0.116, Train Accu: 97.75, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:46:04,345 | INFO | root 	 Task 5/5, Epoch 23/170 => Clf loss: 0.063 Aux loss: 0.119, Train Accu: 97.858, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:46:28,010 | INFO | root 	 Task 5/5, Epoch 24/170 => Clf loss: 0.059 Aux loss: 0.111, Train Accu: 98.092, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:46:51,829 | INFO | root 	 Task 5/5, Epoch 25/170 => Clf loss: 0.056 Aux loss: 0.103, Train Accu: 98.05, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:47:15,750 | INFO | root 	 Task 5/5, Epoch 26/170 => Clf loss: 0.06 Aux loss: 0.11, Train Accu: 97.95, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:47:39,544 | INFO | root 	 Task 5/5, Epoch 27/170 => Clf loss: 0.06 Aux loss: 0.113, Train Accu: 97.95, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:48:03,233 | INFO | root 	 Task 5/5, Epoch 28/170 => Clf loss: 0.058 Aux loss: 0.108, Train Accu: 98.092, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:48:27,098 | INFO | root 	 Task 5/5, Epoch 29/170 => Clf loss: 0.058 Aux loss: 0.109, Train Accu: 98.033, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:48:50,872 | INFO | root 	 Task 5/5, Epoch 30/170 => Clf loss: 0.064 Aux loss: 0.112, Train Accu: 97.733, Train@5 Acc: 99.992, old acc:nan
+
+ 2021-09-24 11:49:14,652 | INFO | root 	 Task 5/5, Epoch 31/170 => Clf loss: 0.051 Aux loss: 0.101, Train Accu: 98.158, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:49:38,574 | INFO | root 	 Task 5/5, Epoch 32/170 => Clf loss: 0.06 Aux loss: 0.11, Train Accu: 97.983, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:50:02,444 | INFO | root 	 Task 5/5, Epoch 33/170 => Clf loss: 0.056 Aux loss: 0.104, Train Accu: 98.125, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:50:26,078 | INFO | root 	 Task 5/5, Epoch 34/170 => Clf loss: 0.06 Aux loss: 0.107, Train Accu: 98.042, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:50:50,264 | INFO | root 	 Task 5/5, Epoch 35/170 => Clf loss: 0.054 Aux loss: 0.097, Train Accu: 98.2, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:51:13,930 | INFO | root 	 Task 5/5, Epoch 36/170 => Clf loss: 0.052 Aux loss: 0.094, Train Accu: 98.275, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:51:38,187 | INFO | root 	 Task 5/5, Epoch 37/170 => Clf loss: 0.051 Aux loss: 0.099, Train Accu: 98.292, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:52:02,442 | INFO | root 	 Task 5/5, Epoch 38/170 => Clf loss: 0.054 Aux loss: 0.105, Train Accu: 98.117, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:52:26,624 | INFO | root 	 Task 5/5, Epoch 39/170 => Clf loss: 0.045 Aux loss: 0.087, Train Accu: 98.6, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:52:50,644 | INFO | root 	 Task 5/5, Epoch 40/170 => Clf loss: 0.048 Aux loss: 0.091, Train Accu: 98.4, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:53:15,151 | INFO | root 	 Task 5/5, Epoch 41/170 => Clf loss: 0.051 Aux loss: 0.096, Train Accu: 98.3, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:53:38,829 | INFO | root 	 Task 5/5, Epoch 42/170 => Clf loss: 0.054 Aux loss: 0.1, Train Accu: 98.208, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:54:02,967 | INFO | root 	 Task 5/5, Epoch 43/170 => Clf loss: 0.05 Aux loss: 0.103, Train Accu: 98.392, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:54:26,698 | INFO | root 	 Task 5/5, Epoch 44/170 => Clf loss: 0.051 Aux loss: 0.092, Train Accu: 98.233, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:54:50,392 | INFO | root 	 Task 5/5, Epoch 45/170 => Clf loss: 0.05 Aux loss: 0.1, Train Accu: 98.183, Train@5 Acc: 99.992, old acc:nan
+
+ 2021-09-24 11:55:14,494 | INFO | root 	 Task 5/5, Epoch 46/170 => Clf loss: 0.049 Aux loss: 0.099, Train Accu: 98.392, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:55:38,345 | INFO | root 	 Task 5/5, Epoch 47/170 => Clf loss: 0.053 Aux loss: 0.1, Train Accu: 98.242, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:56:01,874 | INFO | root 	 Task 5/5, Epoch 48/170 => Clf loss: 0.05 Aux loss: 0.098, Train Accu: 98.392, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:56:25,680 | INFO | root 	 Task 5/5, Epoch 49/170 => Clf loss: 0.047 Aux loss: 0.09, Train Accu: 98.433, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:56:49,309 | INFO | root 	 Task 5/5, Epoch 50/170 => Clf loss: 0.052 Aux loss: 0.098, Train Accu: 98.367, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:57:13,037 | INFO | root 	 Task 5/5, Epoch 51/170 => Clf loss: 0.05 Aux loss: 0.095, Train Accu: 98.358, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:57:36,909 | INFO | root 	 Task 5/5, Epoch 52/170 => Clf loss: 0.046 Aux loss: 0.088, Train Accu: 98.408, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:58:00,458 | INFO | root 	 Task 5/5, Epoch 53/170 => Clf loss: 0.051 Aux loss: 0.095, Train Accu: 98.267, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:58:24,202 | INFO | root 	 Task 5/5, Epoch 54/170 => Clf loss: 0.049 Aux loss: 0.094, Train Accu: 98.233, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:58:48,020 | INFO | root 	 Task 5/5, Epoch 55/170 => Clf loss: 0.052 Aux loss: 0.096, Train Accu: 98.383, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:59:11,460 | INFO | root 	 Task 5/5, Epoch 56/170 => Clf loss: 0.048 Aux loss: 0.09, Train Accu: 98.408, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:59:35,237 | INFO | root 	 Task 5/5, Epoch 57/170 => Clf loss: 0.049 Aux loss: 0.093, Train Accu: 98.375, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 11:59:59,089 | INFO | root 	 Task 5/5, Epoch 58/170 => Clf loss: 0.044 Aux loss: 0.085, Train Accu: 98.525, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:00:22,737 | INFO | root 	 Task 5/5, Epoch 59/170 => Clf loss: 0.049 Aux loss: 0.095, Train Accu: 98.325, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:00:46,113 | INFO | root 	 Task 5/5, Epoch 60/170 => Clf loss: 0.051 Aux loss: 0.094, Train Accu: 98.35, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:01:09,730 | INFO | root 	 Task 5/5, Epoch 61/170 => Clf loss: 0.047 Aux loss: 0.086, Train Accu: 98.342, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:01:33,439 | INFO | root 	 Task 5/5, Epoch 62/170 => Clf loss: 0.052 Aux loss: 0.094, Train Accu: 98.333, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:01:57,459 | INFO | root 	 Task 5/5, Epoch 63/170 => Clf loss: 0.041 Aux loss: 0.08, Train Accu: 98.717, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:02:21,115 | INFO | root 	 Task 5/5, Epoch 64/170 => Clf loss: 0.04 Aux loss: 0.074, Train Accu: 98.692, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:02:44,702 | INFO | root 	 Task 5/5, Epoch 65/170 => Clf loss: 0.047 Aux loss: 0.093, Train Accu: 98.4, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:03:08,643 | INFO | root 	 Task 5/5, Epoch 66/170 => Clf loss: 0.049 Aux loss: 0.093, Train Accu: 98.342, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:03:32,742 | INFO | root 	 Task 5/5, Epoch 67/170 => Clf loss: 0.047 Aux loss: 0.094, Train Accu: 98.383, Train@5 Acc: 99.992, old acc:nan
+
+ 2021-09-24 12:03:56,321 | INFO | root 	 Task 5/5, Epoch 68/170 => Clf loss: 0.041 Aux loss: 0.08, Train Accu: 98.6, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:04:20,362 | INFO | root 	 Task 5/5, Epoch 69/170 => Clf loss: 0.052 Aux loss: 0.095, Train Accu: 98.242, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:04:43,939 | INFO | root 	 Task 5/5, Epoch 70/170 => Clf loss: 0.041 Aux loss: 0.076, Train Accu: 98.775, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:05:07,526 | INFO | root 	 Task 5/5, Epoch 71/170 => Clf loss: 0.049 Aux loss: 0.095, Train Accu: 98.217, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:05:31,537 | INFO | root 	 Task 5/5, Epoch 72/170 => Clf loss: 0.047 Aux loss: 0.087, Train Accu: 98.392, Train@5 Acc: 99.992, old acc:nan
+
+ 2021-09-24 12:05:54,656 | INFO | root 	 Task 5/5, Epoch 73/170 => Clf loss: 0.054 Aux loss: 0.095, Train Accu: 98.125, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:06:18,209 | INFO | root 	 Task 5/5, Epoch 74/170 => Clf loss: 0.048 Aux loss: 0.089, Train Accu: 98.367, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:06:42,252 | INFO | root 	 Task 5/5, Epoch 75/170 => Clf loss: 0.043 Aux loss: 0.078, Train Accu: 98.5, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:07:05,923 | INFO | root 	 Task 5/5, Epoch 76/170 => Clf loss: 0.04 Aux loss: 0.077, Train Accu: 98.683, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:07:29,607 | INFO | root 	 Task 5/5, Epoch 77/170 => Clf loss: 0.042 Aux loss: 0.083, Train Accu: 98.633, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:07:53,645 | INFO | root 	 Task 5/5, Epoch 78/170 => Clf loss: 0.049 Aux loss: 0.09, Train Accu: 98.308, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:08:17,163 | INFO | root 	 Task 5/5, Epoch 79/170 => Clf loss: 0.038 Aux loss: 0.074, Train Accu: 98.725, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:08:40,757 | INFO | root 	 Task 5/5, Epoch 80/170 => Clf loss: 0.045 Aux loss: 0.084, Train Accu: 98.508, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:09:04,499 | INFO | root 	 Task 5/5, Epoch 81/170 => Clf loss: 0.043 Aux loss: 0.086, Train Accu: 98.642, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:09:28,240 | INFO | root 	 Task 5/5, Epoch 82/170 => Clf loss: 0.043 Aux loss: 0.084, Train Accu: 98.725, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:09:52,225 | INFO | root 	 Task 5/5, Epoch 83/170 => Clf loss: 0.047 Aux loss: 0.09, Train Accu: 98.417, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:10:15,959 | INFO | root 	 Task 5/5, Epoch 84/170 => Clf loss: 0.048 Aux loss: 0.085, Train Accu: 98.525, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:10:39,882 | INFO | root 	 Task 5/5, Epoch 85/170 => Clf loss: 0.044 Aux loss: 0.087, Train Accu: 98.458, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:11:03,654 | INFO | root 	 Task 5/5, Epoch 86/170 => Clf loss: 0.047 Aux loss: 0.084, Train Accu: 98.508, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:11:27,715 | INFO | root 	 Task 5/5, Epoch 87/170 => Clf loss: 0.04 Aux loss: 0.08, Train Accu: 98.758, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:11:51,459 | INFO | root 	 Task 5/5, Epoch 88/170 => Clf loss: 0.041 Aux loss: 0.078, Train Accu: 98.6, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:12:15,458 | INFO | root 	 Task 5/5, Epoch 89/170 => Clf loss: 0.043 Aux loss: 0.084, Train Accu: 98.633, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:12:39,208 | INFO | root 	 Task 5/5, Epoch 90/170 => Clf loss: 0.048 Aux loss: 0.089, Train Accu: 98.408, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:13:03,120 | INFO | root 	 Task 5/5, Epoch 91/170 => Clf loss: 0.042 Aux loss: 0.077, Train Accu: 98.692, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:13:26,827 | INFO | root 	 Task 5/5, Epoch 92/170 => Clf loss: 0.046 Aux loss: 0.089, Train Accu: 98.558, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:13:50,505 | INFO | root 	 Task 5/5, Epoch 93/170 => Clf loss: 0.044 Aux loss: 0.087, Train Accu: 98.475, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:14:14,356 | INFO | root 	 Task 5/5, Epoch 94/170 => Clf loss: 0.053 Aux loss: 0.102, Train Accu: 98.292, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:14:38,338 | INFO | root 	 Task 5/5, Epoch 95/170 => Clf loss: 0.049 Aux loss: 0.091, Train Accu: 98.2, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:15:02,123 | INFO | root 	 Task 5/5, Epoch 96/170 => Clf loss: 0.046 Aux loss: 0.086, Train Accu: 98.508, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:15:26,260 | INFO | root 	 Task 5/5, Epoch 97/170 => Clf loss: 0.043 Aux loss: 0.08, Train Accu: 98.5, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:15:50,276 | INFO | root 	 Task 5/5, Epoch 98/170 => Clf loss: 0.039 Aux loss: 0.077, Train Accu: 98.725, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:16:14,074 | INFO | root 	 Task 5/5, Epoch 99/170 => Clf loss: 0.046 Aux loss: 0.091, Train Accu: 98.533, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:16:37,817 | INFO | root 	 Task 5/5, Epoch 100/170 => Clf loss: 0.046 Aux loss: 0.094, Train Accu: 98.508, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:17:01,567 | INFO | root 	 Task 5/5, Epoch 101/170 => Clf loss: 0.05 Aux loss: 0.097, Train Accu: 98.267, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:17:25,458 | INFO | root 	 Task 5/5, Epoch 102/170 => Clf loss: 0.036 Aux loss: 0.07, Train Accu: 98.85, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:17:49,152 | INFO | root 	 Task 5/5, Epoch 103/170 => Clf loss: 0.038 Aux loss: 0.07, Train Accu: 98.725, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:18:13,001 | INFO | root 	 Task 5/5, Epoch 104/170 => Clf loss: 0.043 Aux loss: 0.084, Train Accu: 98.583, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:18:36,642 | INFO | root 	 Task 5/5, Epoch 105/170 => Clf loss: 0.044 Aux loss: 0.086, Train Accu: 98.4, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:19:00,475 | INFO | root 	 Task 5/5, Epoch 106/170 => Clf loss: 0.047 Aux loss: 0.09, Train Accu: 98.442, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:19:24,698 | INFO | root 	 Task 5/5, Epoch 107/170 => Clf loss: 0.054 Aux loss: 0.102, Train Accu: 98.217, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:19:48,611 | INFO | root 	 Task 5/5, Epoch 108/170 => Clf loss: 0.043 Aux loss: 0.078, Train Accu: 98.5, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:20:12,586 | INFO | root 	 Task 5/5, Epoch 109/170 => Clf loss: 0.041 Aux loss: 0.082, Train Accu: 98.725, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:20:36,822 | INFO | root 	 Task 5/5, Epoch 110/170 => Clf loss: 0.053 Aux loss: 0.102, Train Accu: 98.242, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:21:00,400 | INFO | root 	 Task 5/5, Epoch 111/170 => Clf loss: 0.023 Aux loss: 0.042, Train Accu: 99.35, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:21:25,093 | INFO | root 	 Task 5/5, Epoch 112/170 => Clf loss: 0.014 Aux loss: 0.025, Train Accu: 99.683, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:21:48,745 | INFO | root 	 Task 5/5, Epoch 113/170 => Clf loss: 0.01 Aux loss: 0.018, Train Accu: 99.833, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:22:12,669 | INFO | root 	 Task 5/5, Epoch 114/170 => Clf loss: 0.009 Aux loss: 0.014, Train Accu: 99.833, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:22:37,606 | INFO | root 	 Task 5/5, Epoch 115/170 => Clf loss: 0.008 Aux loss: 0.013, Train Accu: 99.867, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:23:03,789 | INFO | root 	 Task 5/5, Epoch 116/170 => Clf loss: 0.006 Aux loss: 0.009, Train Accu: 99.933, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:23:27,541 | INFO | root 	 Task 5/5, Epoch 117/170 => Clf loss: 0.007 Aux loss: 0.009, Train Accu: 99.883, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:23:51,400 | INFO | root 	 Task 5/5, Epoch 118/170 => Clf loss: 0.006 Aux loss: 0.01, Train Accu: 99.9, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:24:15,199 | INFO | root 	 Task 5/5, Epoch 119/170 => Clf loss: 0.005 Aux loss: 0.007, Train Accu: 99.933, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:24:39,306 | INFO | root 	 Task 5/5, Epoch 120/170 => Clf loss: 0.005 Aux loss: 0.006, Train Accu: 99.917, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:25:03,086 | INFO | root 	 Task 5/5, Epoch 121/170 => Clf loss: 0.005 Aux loss: 0.006, Train Accu: 99.942, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:25:26,926 | INFO | root 	 Task 5/5, Epoch 122/170 => Clf loss: 0.004 Aux loss: 0.006, Train Accu: 99.958, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:25:50,688 | INFO | root 	 Task 5/5, Epoch 123/170 => Clf loss: 0.004 Aux loss: 0.005, Train Accu: 99.95, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:26:14,385 | INFO | root 	 Task 5/5, Epoch 124/170 => Clf loss: 0.004 Aux loss: 0.005, Train Accu: 99.967, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:26:38,540 | INFO | root 	 Task 5/5, Epoch 125/170 => Clf loss: 0.004 Aux loss: 0.004, Train Accu: 99.967, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:27:02,348 | INFO | root 	 Task 5/5, Epoch 126/170 => Clf loss: 0.004 Aux loss: 0.004, Train Accu: 99.958, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:27:26,280 | INFO | root 	 Task 5/5, Epoch 127/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 99.983, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:27:49,983 | INFO | root 	 Task 5/5, Epoch 128/170 => Clf loss: 0.004 Aux loss: 0.004, Train Accu: 99.95, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:28:13,884 | INFO | root 	 Task 5/5, Epoch 129/170 => Clf loss: 0.004 Aux loss: 0.003, Train Accu: 99.95, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:28:37,437 | INFO | root 	 Task 5/5, Epoch 130/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 99.983, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:29:01,382 | INFO | root 	 Task 5/5, Epoch 131/170 => Clf loss: 0.004 Aux loss: 0.004, Train Accu: 99.983, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:29:25,171 | INFO | root 	 Task 5/5, Epoch 132/170 => Clf loss: 0.004 Aux loss: 0.004, Train Accu: 99.983, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:29:48,663 | INFO | root 	 Task 5/5, Epoch 133/170 => Clf loss: 0.004 Aux loss: 0.003, Train Accu: 99.975, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:30:12,721 | INFO | root 	 Task 5/5, Epoch 134/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 99.967, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:30:36,502 | INFO | root 	 Task 5/5, Epoch 135/170 => Clf loss: 0.003 Aux loss: 0.002, Train Accu: 99.992, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:31:00,232 | INFO | root 	 Task 5/5, Epoch 136/170 => Clf loss: 0.003 Aux loss: 0.002, Train Accu: 99.992, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:31:24,050 | INFO | root 	 Task 5/5, Epoch 137/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 99.992, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:31:47,718 | INFO | root 	 Task 5/5, Epoch 138/170 => Clf loss: 0.003 Aux loss: 0.002, Train Accu: 99.992, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:32:11,456 | INFO | root 	 Task 5/5, Epoch 139/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 99.975, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:32:35,475 | INFO | root 	 Task 5/5, Epoch 140/170 => Clf loss: 0.003 Aux loss: 0.002, Train Accu: 99.992, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:32:59,429 | INFO | root 	 Task 5/5, Epoch 141/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 99.992, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:33:23,093 | INFO | root 	 Task 5/5, Epoch 142/170 => Clf loss: 0.003 Aux loss: 0.002, Train Accu: 100.0, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:33:46,703 | INFO | root 	 Task 5/5, Epoch 143/170 => Clf loss: 0.003 Aux loss: 0.002, Train Accu: 99.967, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:34:10,114 | INFO | root 	 Task 5/5, Epoch 144/170 => Clf loss: 0.003 Aux loss: 0.002, Train Accu: 99.983, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:34:33,828 | INFO | root 	 Task 5/5, Epoch 145/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 99.992, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:34:57,403 | INFO | root 	 Task 5/5, Epoch 146/170 => Clf loss: 0.003 Aux loss: 0.002, Train Accu: 99.992, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:35:20,770 | INFO | root 	 Task 5/5, Epoch 147/170 => Clf loss: 0.003 Aux loss: 0.002, Train Accu: 99.992, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:35:44,908 | INFO | root 	 Task 5/5, Epoch 148/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 99.975, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:36:08,538 | INFO | root 	 Task 5/5, Epoch 149/170 => Clf loss: 0.003 Aux loss: 0.002, Train Accu: 99.975, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:36:32,069 | INFO | root 	 Task 5/5, Epoch 150/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 99.975, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:36:55,981 | INFO | root 	 Task 5/5, Epoch 151/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 99.992, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:37:19,803 | INFO | root 	 Task 5/5, Epoch 152/170 => Clf loss: 0.003 Aux loss: 0.002, Train Accu: 99.983, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:37:43,830 | INFO | root 	 Task 5/5, Epoch 153/170 => Clf loss: 0.003 Aux loss: 0.002, Train Accu: 99.992, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:38:07,785 | INFO | root 	 Task 5/5, Epoch 154/170 => Clf loss: 0.003 Aux loss: 0.002, Train Accu: 99.983, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:38:32,241 | INFO | root 	 Task 5/5, Epoch 155/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 99.992, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:38:56,585 | INFO | root 	 Task 5/5, Epoch 156/170 => Clf loss: 0.003 Aux loss: 0.002, Train Accu: 99.992, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:39:21,103 | INFO | root 	 Task 5/5, Epoch 157/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 100.0, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:39:43,214 | INFO | root 	 Task 5/5, Epoch 158/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 99.983, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:40:05,744 | INFO | root 	 Task 5/5, Epoch 159/170 => Clf loss: 0.003 Aux loss: 0.002, Train Accu: 100.0, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:40:28,410 | INFO | root 	 Task 5/5, Epoch 160/170 => Clf loss: 0.003 Aux loss: 0.002, Train Accu: 99.975, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:40:49,263 | INFO | root 	 Task 5/5, Epoch 161/170 => Clf loss: 0.003 Aux loss: 0.002, Train Accu: 100.0, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:41:10,371 | INFO | root 	 Task 5/5, Epoch 162/170 => Clf loss: 0.003 Aux loss: 0.002, Train Accu: 100.0, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:41:31,447 | INFO | root 	 Task 5/5, Epoch 163/170 => Clf loss: 0.003 Aux loss: 0.002, Train Accu: 99.983, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:41:52,728 | INFO | root 	 Task 5/5, Epoch 164/170 => Clf loss: 0.003 Aux loss: 0.002, Train Accu: 99.992, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:42:14,102 | INFO | root 	 Task 5/5, Epoch 165/170 => Clf loss: 0.003 Aux loss: 0.002, Train Accu: 99.983, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:42:35,606 | INFO | root 	 Task 5/5, Epoch 166/170 => Clf loss: 0.003 Aux loss: 0.002, Train Accu: 99.958, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:42:56,754 | INFO | root 	 Task 5/5, Epoch 167/170 => Clf loss: 0.003 Aux loss: 0.002, Train Accu: 100.0, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:43:18,134 | INFO | root 	 Task 5/5, Epoch 168/170 => Clf loss: 0.003 Aux loss: 0.002, Train Accu: 99.983, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:43:39,379 | INFO | root 	 Task 5/5, Epoch 169/170 => Clf loss: 0.003 Aux loss: 0.003, Train Accu: 99.975, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:44:00,282 | INFO | root 	 Task 5/5, Epoch 170/170 => Clf loss: 0.003 Aux loss: 0.002, Train Accu: 99.992, Train@5 Acc: 100.0, old acc:nan
+
+ 2021-09-24 12:44:00,284 | INFO | root 	 After training: Weight norm per class [1.936, 1.993, 2.028, 2.028, 2.875]
+
+ 2021-09-24 12:44:32,606 | INFO | root 	 Trainset: Feature norm per class [9.961, 9.852, 9.336, 9.484, 8.696]
+
+ 2021-09-24 12:44:32,695 | INFO | root 	 save model
+
+ 2021-09-24 12:44:33,339 | INFO | root 	 Begin finetuning last layer
+
+ 2021-09-24 12:44:38,686 | INFO | root 	 Epoch 0 finetuning loss 2.084 acc 0.755
+
+ 2021-09-24 12:44:44,093 | INFO | root 	 Epoch 1 finetuning loss 1.408 acc 0.991
+
+ 2021-09-24 12:44:49,694 | INFO | root 	 Epoch 2 finetuning loss 0.919 acc 0.997
+
+ 2021-09-24 12:44:55,216 | INFO | root 	 Epoch 3 finetuning loss 0.650 acc 0.997
+
+ 2021-09-24 12:45:00,654 | INFO | root 	 Epoch 4 finetuning loss 0.496 acc 0.999
+
+ 2021-09-24 12:45:06,107 | INFO | root 	 Epoch 5 finetuning loss 0.404 acc 0.998
+
+ 2021-09-24 12:45:11,585 | INFO | root 	 Epoch 6 finetuning loss 0.340 acc 0.999
+
+ 2021-09-24 12:45:17,263 | INFO | root 	 Epoch 7 finetuning loss 0.300 acc 0.998
+
+ 2021-09-24 12:45:22,726 | INFO | root 	 Epoch 8 finetuning loss 0.261 acc 0.998
+
+ 2021-09-24 12:45:28,196 | INFO | root 	 Epoch 9 finetuning loss 0.238 acc 0.998
+
+ 2021-09-24 12:45:33,456 | INFO | root 	 Epoch 10 finetuning loss 0.219 acc 0.998
+
+ 2021-09-24 12:45:38,953 | INFO | root 	 Epoch 11 finetuning loss 0.200 acc 0.998
+
+ 2021-09-24 12:45:44,488 | INFO | root 	 Epoch 12 finetuning loss 0.188 acc 1.000
+
+ 2021-09-24 12:45:49,959 | INFO | root 	 Epoch 13 finetuning loss 0.177 acc 1.000
+
+ 2021-09-24 12:45:55,414 | INFO | root 	 Epoch 14 finetuning loss 0.164 acc 0.999
+
+ 2021-09-24 12:46:00,731 | INFO | root 	 Epoch 15 finetuning loss 0.160 acc 0.999
+
+ 2021-09-24 12:46:06,164 | INFO | root 	 Epoch 16 finetuning loss 0.157 acc 0.999
+
+ 2021-09-24 12:46:11,592 | INFO | root 	 Epoch 17 finetuning loss 0.159 acc 0.998
+
+ 2021-09-24 12:46:17,143 | INFO | root 	 Epoch 18 finetuning loss 0.159 acc 0.999
+
+ 2021-09-24 12:46:22,756 | INFO | root 	 Epoch 19 finetuning loss 0.156 acc 0.999
+
+ 2021-09-24 12:46:28,230 | INFO | root 	 Epoch 20 finetuning loss 0.154 acc 0.999
+
+ 2021-09-24 12:46:33,682 | INFO | root 	 Epoch 21 finetuning loss 0.154 acc 1.000
+
+ 2021-09-24 12:46:39,067 | INFO | root 	 Epoch 22 finetuning loss 0.156 acc 0.999
+
+ 2021-09-24 12:46:44,674 | INFO | root 	 Epoch 23 finetuning loss 0.154 acc 0.999
+
+ 2021-09-24 12:46:50,960 | INFO | root 	 Epoch 24 finetuning loss 0.152 acc 0.999
+
+ 2021-09-24 12:46:56,496 | INFO | root 	 Epoch 25 finetuning loss 0.152 acc 0.999
+
+ 2021-09-24 12:47:02,581 | INFO | root 	 Epoch 26 finetuning loss 0.152 acc 0.998
+
+ 2021-09-24 12:47:08,375 | INFO | root 	 Epoch 27 finetuning loss 0.149 acc 0.999
+
+ 2021-09-24 12:47:13,999 | INFO | root 	 Epoch 28 finetuning loss 0.150 acc 1.000
+
+ 2021-09-24 12:47:19,735 | INFO | root 	 Epoch 29 finetuning loss 0.149 acc 0.999
+
+ 2021-09-24 12:47:25,360 | INFO | root 	 Epoch 30 finetuning loss 0.149 acc 1.000
+
+ 2021-09-24 12:47:30,902 | INFO | root 	 Epoch 31 finetuning loss 0.149 acc 0.998
+
+ 2021-09-24 12:47:36,286 | INFO | root 	 Epoch 32 finetuning loss 0.150 acc 0.998
+
+ 2021-09-24 12:47:42,160 | INFO | root 	 Epoch 33 finetuning loss 0.150 acc 0.999
+
+ 2021-09-24 12:47:47,760 | INFO | root 	 Epoch 34 finetuning loss 0.148 acc 0.999
+
+ 2021-09-24 12:47:53,268 | INFO | root 	 Epoch 35 finetuning loss 0.149 acc 0.999
+
+ 2021-09-24 12:47:58,411 | INFO | root 	 Epoch 36 finetuning loss 0.148 acc 0.999
+
+ 2021-09-24 12:48:03,664 | INFO | root 	 Epoch 37 finetuning loss 0.149 acc 0.998
+
+ 2021-09-24 12:48:08,921 | INFO | root 	 Epoch 38 finetuning loss 0.147 acc 0.999
+
+ 2021-09-24 12:48:14,247 | INFO | root 	 Epoch 39 finetuning loss 0.149 acc 1.000
+
+ 2021-09-24 12:48:19,503 | INFO | root 	 Epoch 40 finetuning loss 0.150 acc 0.999
+
+ 2021-09-24 12:48:24,764 | INFO | root 	 Epoch 41 finetuning loss 0.146 acc 0.998
+
+ 2021-09-24 12:48:29,989 | INFO | root 	 Epoch 42 finetuning loss 0.147 acc 0.999
+
+ 2021-09-24 12:48:35,632 | INFO | root 	 Epoch 43 finetuning loss 0.148 acc 0.999
+
+ 2021-09-24 12:48:41,025 | INFO | root 	 Epoch 44 finetuning loss 0.148 acc 0.998
+
+ 2021-09-24 12:48:46,465 | INFO | root 	 Epoch 45 finetuning loss 0.150 acc 0.998
+
+ 2021-09-24 12:48:52,008 | INFO | root 	 Epoch 46 finetuning loss 0.147 acc 0.999
+
+ 2021-09-24 12:48:57,710 | INFO | root 	 Epoch 47 finetuning loss 0.147 acc 0.998
+
+ 2021-09-24 12:49:03,168 | INFO | root 	 Epoch 48 finetuning loss 0.146 acc 0.999
+
+ 2021-09-24 12:49:09,106 | INFO | root 	 Epoch 49 finetuning loss 0.148 acc 0.999
+
+ 2021-09-24 12:49:09,898 | INFO | root 	 build memory
+
+ 2021-09-24 12:49:09,899 | INFO | root 	 Building & updating memory.(iCaRL)
+
+ 2021-09-24 12:49:19,557 | INFO | root 	 Save step4 memory!
+
+ 2021-09-24 12:49:19,835 | INFO | root 	 Eval on 0->10.
+
+ 2021-09-24 12:49:32,948 | INFO | root 	 top1:{'total': 84.8, '00-01': 75.9, '02-03': 72.3, '04-05': 87.3, '06-07': 91.55, '08-09': 96.95}
+
+ 2021-09-24 12:49:32,949 | INFO | root 	 top5:{'total': 99.36, '00-01': 90.6, '02-03': 90.05, '04-05': 96.35, '06-07': 98.9, '08-09': 98.9}
+
+ 2021-09-24 12:49:32,949 | INFO | root 	 Average Incremental Accuracy Top 1: 89.60159999999999 Top 5: 99.7328.
+
+ 2021-09-24 12:49:33,494 | INFO | root 	 Training finished in 13611s.

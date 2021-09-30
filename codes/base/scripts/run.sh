@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
-name='10scifar100_trial0_debug'
+name='10scifar10_fuzzy_trial0_debug'
 debug='1'
 comments='None'
-expid='1'
-
+expid='cifar10_fuzz'
+export CUDA_VISIBLE_DEVICES="4,5,6,7"
 
 if [ ${debug} -eq '0' ]; then
     python -m main train with "./configs/${expid}.yaml" \

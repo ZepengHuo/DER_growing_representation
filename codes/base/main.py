@@ -8,6 +8,7 @@ import os
 import os.path as osp
 import copy
 import time
+from datetime import datetime
 import shutil
 import cProfile
 import logging
@@ -52,7 +53,10 @@ def initialization(config, seed, mode, exp_id):
     if exp_id is None:
         exp_id = -1
         cfg.exp.savedir = "./logs"
-    logger = utils.make_logger(f"exp{exp_id}_{cfg.exp.name}_{mode}", savedir=cfg.exp.savedir)
+    now = datetime.now()
+    dt_string = now.strftime("%m-%d_%H:%M")
+    logger = utils.make_logger(f"exp{exp_id}_{cfg.exp.name}_{mode}_{dt_string}", savedir=cfg.exp.savedir)
+
 
     # Tensorboard
     exp_name = f'{exp_id}_{cfg["exp"]["name"]}' if exp_id is not None else f'../inbox/{cfg["exp"]["name"]}'
@@ -96,7 +100,10 @@ def _train(cfg, _run, ex, tensorboard):
     results = results_utils.get_template_results(cfg)
 
     for task_i in range(inc_dataset.n_tasks):
-        task_info, train_loader, val_loader, test_loader = inc_dataset.new_task()
+        if cfg['fuzzy']:
+            task_info, train_loader, val_loader, test_loader = inc_dataset.new_fuzzy_task()
+        else:
+            task_info, train_loader, val_loader, test_loader = inc_dataset.new_task()
 
         model.set_task_info(
             task=task_info["task"],

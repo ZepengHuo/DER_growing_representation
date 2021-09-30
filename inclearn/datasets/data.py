@@ -22,6 +22,15 @@ from .dataset import get_dataset
 from inclearn.tools.data_utils import construct_balanced_subset
 
 
+from ..datasets.data_cndpm import DataScheduler
+from argparse import ArgumentParser
+import yaml
+import os
+import resource
+import torch
+from tensorboardX import SummaryWriter
+
+
 def get_data_folder(data_folder, dataset_name):
     return osp.join(data_folder, dataset_name)
 
@@ -88,6 +97,8 @@ class IncrementalDataset:
 
         #Current states for Incremental Learning Stage.
         self._current_task = 0
+        
+        self.fuzzy_data_scheduler_ls = self.get_fuzzy_data_scheduler_ls()
 
     @property
     def n_tasks(self):
@@ -98,7 +109,42 @@ class IncrementalDataset:
             raise Exception("No more tasks.")
 
         min_class, max_class, x_train, y_train, x_test, y_test = self._get_cur_step_data_for_raw_data()
+        
+        self.data_cur, self.targets_cur = x_train, y_train
 
+        if self.data_memory is not None:
+            print("Set memory of size: {}.".format(len(self.data_memory)))
+            if len(self.data_memory) != 0:
+                x_train = np.concatenate((x_train, self.data_memory))
+                y_train = np.concatenate((y_train, self.targets_memory))
+
+        self.data_inc, self.targets_inc = x_train, y_train
+        self.data_test_inc, self.targets_test_inc = x_test, y_test
+
+        train_loader = self._get_loader(x_train, y_train, mode="train")
+        val_loader = self._get_loader(x_test, y_test, shuffle=False, mode="test")
+        test_loader = self._get_loader(x_test, y_test, shuffle=False, mode="test")
+
+        task_info = {
+            "min_class": min_class,
+            "max_class": max_class,
+            "increment": self.increments[self._current_task],
+            "task": self._current_task,
+            "max_task": len(self.increments),
+            "n_train_data": len(x_train),
+            "n_test_data": len(y_train),
+        }
+
+        self._current_task += 1
+        return task_info, train_loader, val_loader, test_loader
+    
+    def new_fuzzy_task(self):
+        if self._current_task >= len(self.increments):
+            raise Exception("No more tasks.")
+
+        current_task = self._current_task
+        min_class, max_class, x_train, y_train, x_test, y_test = self._get_cur_step_data_for_raw_data_fuzzy(current_task)
+        print(x_train.shape, type(x_train), y_train.shape, type(y_train))
         self.data_cur, self.targets_cur = x_train, y_train
 
         if self.data_memory is not None:
@@ -133,6 +179,33 @@ class IncrementalDataset:
 
         x_train, y_train = self._select(self.data_train, self.targets_train, low_range=min_class, high_range=max_class)
         x_test, y_test = self._select(self.data_test, self.targets_test, low_range=0, high_range=max_class)
+        
+        return min_class, max_class, x_train, y_train, x_test, y_test
+    
+    def _get_cur_step_data_for_raw_data_fuzzy(self, taski):
+        
+        index = 0
+        for x, y, t in self.fuzzy_data_scheduler_ls[taski]:
+            if index == 0:
+                x_train = x
+                y_train = y.numpy().tolist()
+            else:
+                x = x.numpy()
+                y = y.numpy().tolist()
+                x_train = np.concatenate((x_train, x))
+                y_train.extend(y)
+            index += 1
+        min_class = min(y_train)
+        max_class = max(y_train)
+        
+        x_test = self.fuzzy_data_scheduler_ls[taski].eval_datasets['cifar10'].data
+        y_test =  self.fuzzy_data_scheduler_ls[taski].eval_datasets['cifar10'].targets
+        x_test, y_test = np.array(x_test), np.array(y_test)
+                
+        x_test, y_test = self._select(x_test, y_test, low_range=0, high_range=max_class)
+        x_train, y_train = np.array(x_train), np.array(y_train)
+        x_train = np.swapaxes(x_train, 1, 3)
+        
         return min_class, max_class, x_train, y_train, x_test, y_test
 
     #--------------------------------
@@ -199,6 +272,39 @@ class IncrementalDataset:
         self.targets_val.append(y_val)
         self.data_test.append(x_test)
         self.targets_test.append(y_test)
+        
+    def get_fuzzy_data_scheduler_ls(self):
+        rlimit = resource.getrlimit(resource.RLIMIT_NOFILE)
+        resource.setrlimit(resource.RLIMIT_NOFILE, (4096, rlimit[1]))
+
+        parser = ArgumentParser()
+        parser.add_argument(
+            '--config', '-c', default='configs/cifar10-cndpm_fuzzy.yaml'
+        )
+        parser.add_argument(
+            '--episode', '-e', default='episodes/cifar10-fuzzy_split-online.yaml'
+        )
+        parser.add_argument('--log-dir', '-l')
+        parser.add_argument('--override', default='')
+
+
+        args = parser.parse_args(args=[])
+
+
+        config = yaml.load(open(args.config), Loader=yaml.FullLoader)
+        episode = yaml.load(open(args.episode), Loader=yaml.FullLoader)
+        data_scheduler_ls = []
+        task_increments = [0, 1, 5, 5, 5, 5, 1]
+
+        for i in range(len(task_increments)):
+            start_index = sum(task_increments[:i])
+            end_index = sum(task_increments[:i+1])
+            episode_i = episode[start_index: end_index]
+            config['data_schedule'] = episode_i
+
+            data_scheduler_ls.append(DataScheduler(config))
+        data_scheduler_ls = data_scheduler_ls[1:]
+        return data_scheduler_ls
 
     @staticmethod
     def _split_per_class(x, y, validation_split=0.0):
@@ -367,7 +473,10 @@ class DummyDataset(torch.utils.data.Dataset):
         x, y, = self.x[idx], self.y[idx]
         if isinstance(x, np.ndarray):
             # assume cifar
-            x = Image.fromarray(x)
+            if x.dtype == np.uint8:
+                x = Image.fromarray(x)
+            elif x.dtype == np.float32:
+                x = Image.fromarray((x * 255).astype(np.uint8))
         else:
             # Assume the dataset is ImageNet
             if idx < len(self.share_memory):

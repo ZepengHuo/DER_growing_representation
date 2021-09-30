@@ -1,0 +1,112 @@
+{
+  "config": {
+    "exp": {
+      "name": "10scifar10_trial0_debug",
+      "savedir": "./logs",
+      "tensorboard_dir": "./tensorboard/",
+      "debug": true,
+      "ckptdir": "./logs/"
+    },
+    "model": "incmodel",
+    "convnet": "resnet18",
+    "train_head": "softmax",
+    "infer_head": "softmax",
+    "channel": 64,
+    "use_bias": false,
+    "last_relu": false,
+    "der": true,
+    "use_aux_cls": true,
+    "aux_n+1": true,
+    "distillation": "none",
+    "reuse_oldfc": false,
+    "weight_normalization": false,
+    "val_per_n_epoch": -1,
+    "save_ckpt": true,
+    "display_norm": false,
+    "task_max": 10,
+    "lr_min": 5e-05,
+    "lr": 0.1,
+    "weight_decay": 0.0005,
+    "dynamic_weight_decay": false,
+    "scheduler": "multistep",
+    "scheduling": [
+      100,
+      120
+    ],
+    "lr_decay": 0.1,
+    "optimizer": "sgd",
+    "epochs": 170,
+    "postprocessor": {
+      "enable": false,
+      "type": "bic",
+      "epochs": 1,
+      "batch_size": 128,
+      "lr": 0.1,
+      "scheduling": [
+        60,
+        90,
+        120
+      ],
+      "lr_decay_factor": 0.1,
+      "weight_decay": 0.0005
+    },
+    "decouple": {
+      "enable": true,
+      "epochs": 50,
+      "fullset": false,
+      "lr": 0.05,
+      "scheduling": [
+        15,
+        30
+      ],
+      "lr_decay": 0.1,
+      "weight_decay": 0.0005,
+      "temperature": 5.0
+    },
+    "dataset": "cifar10",
+    "trial": 2,
+    "increment": 10,
+    "batch_size": 128,
+    "workers": 8,
+    "validation": 0,
+    "random_classes": false,
+    "start_class": 0,
+    "start_task": 0,
+    "max_task": null,
+    "coreset_strategy": "iCaRL",
+    "mem_size_mode": "uniform_fixed_total_mem",
+    "memory_size": 2000,
+    "fixed_memory_per_cls": 20,
+    "seed": 1993,
+    "load_mem": false,
+    "pretrain": {
+      "epochs": 200,
+      "lr": 0.1,
+      "lr_decay": 0.1,
+      "scheduling": [
+        60,
+        120,
+        160
+      ],
+      "weight_decay": 0.0005
+    },
+    "resampling": false,
+    "save_mem": true,
+    "temperature": 2,
+    "warmup": true,
+    "warmup_epochs": 10,
+    "data_folder": "/home/grads/g/guangzhou92/Research/growing_MoE/DER-ClassIL.pytorch/data"
+  },
+  "results": [
+    {
+      "top1": {
+        "total": 94.87,
+        "00-09": 94.87
+      },
+      "top5": {
+        "total": 99.93,
+        "00-09": 99.93
+      }
+    }
+  ]
+}
